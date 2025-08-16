@@ -1,6 +1,5 @@
 body{
-  width: 100vh;
-  height: 100vw;
+  margin: 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -39,10 +38,7 @@ a{
 .navbar{
   margin-left: -1%;
   background-color: #0050a3;
-  width: 213%;
   display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -60,6 +56,7 @@ a{
   background-color: whitesmoke;
   border: none;
   height: 20px;
+  margin-left: 25%;
 }
 
 input::placeholder{
@@ -75,6 +72,7 @@ input::placeholder{
   height: 30px;
   width: 30px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 #carrinho{
@@ -82,6 +80,7 @@ input::placeholder{
   background: url("img/carrinho.png")  no-repeat left / 2.2em;
   height: 30px;
   width: 30px;
+  cursor: pointer;
 }
 
 #favoritos{
@@ -90,4 +89,70 @@ input::placeholder{
   height: 30px;
   width: 30px;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+section.slider{
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider-content{
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input{
+  display: none;
+}
+
+.slide-box{
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.slide-box video{
+  width: 100%;
+}
+
+.nav-manual, .nav-auto{
+  position: absolute;
+  width: 100%;
+  margin-top: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+  border: 1px solid #0050a3;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+  margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+  background-color: #0050a3;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio1:checked ~ .nav-auto .auto-btn2{
+  background-color: #0050a3;
+}
+
+#radio1:checked ~ .primeiro{
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+  margin-left: 25%;
 }
