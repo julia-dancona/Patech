@@ -1,0 +1,613 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  color: #ffff;
+  text-decoration: none;
+}
+
+p, figcaption{
+  font-family: "Poppins", sans-serif;
+
+}
+
+.redirecionamento {
+  margin-right: 250px;
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  padding-left: 2%;
+  gap: 5%;
+  color: white;
+}
+
+
+.navbar {
+  background-color: #0050a3;
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  height: 75px;
+  padding-left: 2%;
+  margin: 5px;
+}
+
+#usr {
+  background: url("img/iconePesquisa.png") no-repeat left / 4.3%;
+  padding-left: 20px;
+  height: 50px;
+  width: 60%;
+  font-size: 14px;
+  background-color: whitesmoke;
+  border: 1px solid #ddd;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.Pesquise{
+  width: 50%;
+  background: #0050a3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input::placeholder {
+  color: #0050a3;
+}
+
+.icones{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  gap: 30px;
+}
+
+#dashboard {
+  border: none;
+  background: url("img/iconePerfil.png") no-repeat left / 2.5em;
+  height: 85px;
+  width: 85px;
+  cursor: pointer;
+}
+
+#carrinho {
+  border: none;
+  background: url("img/carrinho.png") no-repeat left / 2.5em;
+  height: 85px;
+  width: 85px;
+  cursor: pointer;
+}
+
+#favoritos {
+  border: none;
+  background: url("img/favoritos.png") no-repeat left / 2.5em;
+  height: 85px;
+  width: 85px;
+  cursor: pointer;
+}
+
+section.slider {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider-content {
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input {
+  display: none;
+}
+
+.slide-box {
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.slide-box video {
+  width: 100%;
+}
+
+.nav-manual,
+.nav-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-manual .manual-btn,
+.nav-auto div {
+  border: 1px solid #0050a3;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child),
+.nav-auto div:not(:last-child) {
+  margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+  background-color: #0050a3;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio1:checked ~ .nav-auto .auto-btn2 {
+  background-color: #0050a3;
+}
+
+#radio1:checked ~ .primeiro {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+  margin-left: 25%;
+}
+
+
+/* NOVIDADES  */
+.novidades{
+  margin-top: 3%;
+}
+
+.produtos {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+}
+
+.itensNovos {     
+  margin: 5% 10% 5% 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+
+  img{
+  border-radius: 15px;
+  }
+
+  a{
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+ }
+}
+
+.item01{
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  height: 20%;
+  width: 30%;
+  figcaption{
+    text-align: center;
+    height: 20%;
+    width: 80%;
+  font-weight: 500;
+  }
+}
+
+.item01:hover{
+  transform: translateY(-5px);
+}
+
+h1{
+  font-family: "Lora", serif;
+  font-size: 350%;
+  margin-left: 5%;
+}
+
+/* CATEGORIAS */
+
+.Amarelo{
+  background-color: #FFE9A7;
+  width: 100;
+  height: 10%;
+  border: 1px solid #FFE9A7;
+}
+
+.bgAmarelo{
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.categorias{
+  border-radius: 15px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 5%;
+  margin: 5%;
+  align-items: center;
+}
+
+.hardware, .periferico, .eletronicos, .redes, .acessorios{
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hardware:hover, .periferico:hover, .eletronicos:hover, .redes:hover, .acessorios:hover {
+  transform: translateY(-6px);
+}
+
+
+/* NOSSOS PRODUTOS  */
+.tituloN{
+  margin-bottom: -5%;
+}
+
+.nossosProdutos {
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nossasPecas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5%;
+  gap: 5%; 
+}
+.nossasPecas, a{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+} 
+
+.p1 {
+  width: 20%; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.pecas img{
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.pecas, img:hover{
+  transform: translateY(-6px);
+  transition: transform 0.5s ease;
+}
+
+/* RODAPÉ */
+.rodapeAzul {
+  height: 500px;
+  background-color: #0050A3;
+  width: 99.9%;
+  border: 1px solid #0050A3;
+    h1 {
+    font-size: 200%;
+    color: white;
+    margin: 5% 0;
+  }  
+}
+.bgAzul {
+  margin: 5%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+.redesSociais, .tituloA, .formasPagamento, .conheca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  color: white;
+}
+
+.formasPagamento {
+  display: flex;
+  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagamento {
+  width: 30%;
+  height: 30%;
+  object-fit: contain;
+  margin: 5%;
+}
+
+.logoRodape{
+  display: block;
+  align-items: center;
+  justify-self: center;
+  height: 20%;
+  width: 80%;
+
+}
+
+.imgRodape{
+  display: block;
+
+}
+
+/* MODAL DO CARRINHO */
+.modal-carrinho1, .modal-favoritos1 {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+}
+
+.modal-conteudo1 {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 40%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+span.fechar1 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1%;
+}
+
+.fechar1:hover,
+.fechar1:focus {
+  color: black;
+}
+
+/* MODAL DOS FAVORITOS */
+.botoesAcaoes1{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  gap: 3%;
+}
+
+.btnRed{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: #FFE9A7;
+  border-radius: 20px;
+  border: 2px solid #F2C029;
+  width: 180px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.btnRed:hover{
+  transform: translateY(-5px);
+  transition: transform 0.5s ease out;
+}
+
+/* MODAL DOS PRODUTOS */
+.modais{
+  height: 20%;
+  width: 20%;
+  gap: 5%;
+  background-color: fff;
+  margin-top: 2%;
+}
+
+button.abrir-modal{
+  background-color: #fff;
+  border: none;
+  font-size: 110% ;
+}
+
+.card-produto{
+  width: 80%;
+  height: 55%;
+}
+
+.legenda-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 9%;   
+  width: 80%;
+}
+
+/* DENTRO DO MODAL */
+.modal-Produto{
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo */
+}
+
+.modal-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faefce;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.conteudoJunto{
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  gap: 8%;
+}
+
+.p1 {
+  width: 75%;
+  height: 80%; 
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 2%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.tituloEpreco{
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  text-align: justify;
+  width: 80%;
+  height: 20%;  
+  gap: 8%;
+
+}
+
+.tituloM{
+  font-size: 200%;
+  margin: 2%;
+}
+
+.legenda-conteudo{
+  margin:2%;
+}
+
+.preco-antes{
+  border-radius: 10px;
+  font-size: 100%;
+  margin: 2% 2% -2% 2%;
+}
+
+.precos{
+  font-size: 150%;
+  margin: 2%;
+}
+
+.botoesAcaoes2{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 8%;
+  gap: 8%;
+}
+
+.btnModal{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: #FFE9A7;
+  border-radius: 20px;
+  border: 2px solid #F2C029;
+  width: 180px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.btnModal:hover{
+  transform: translateY(-5px);
+  transition: transform 0.5s ease out;
+}
+
+span{
+  margin-top: -10%;
+}
+
+#listaProdutos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+#listaProdutos li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  background: #f6f6f6;
+  display: flex;
+}
+
+span.item-name{
+  margin-left: 15px;
+}

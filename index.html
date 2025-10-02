@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../Home/img/shortcuticon.png">
+
+    <title>Patech</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    
+     <!-- fonte do corpo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- fonte do títulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="navbar">
+        
+        <img class="Logo" src="../img/Logo.png" alt="Logo"></img>   
+        
+        <div class="redirecionamento">  
+        <a href="../Sobre/index.html"> Sobre </a>
+        <a href=""> Promoções </a>
+        </div>
+        
+        <div class="Pesquise">
+            <input type="text" class='pesquisa' id="usr" placeholder="Pesquise na Patech"></input>
+
+            <ul id="listaProdutos">
+                <li> <a href="#">
+                        <img width="45"
+                            src="img/produto1.png">
+                        <span class="item-name">Hardware</span>
+                    </a>
+                </li>
+                <li> <a href="#">
+                    <img width="45"
+                        src="img/produto1.png">
+                    <span class="item-name">Hardware</span>
+                    </a>
+                </li>
+                <li> <a href="#">
+                    <img width="45"
+                        src="img/produto1.png">
+                    <span class="item-name">Hardware</span>
+                    </a>
+                </li>
+                <li> <a href="#">
+                    <img width="45"
+                        src="img/produto1.png">
+                    <span class="item-name">Hardware</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="icones">
+            <button onclick="irCarrinho()" id="carrinho"></button>
+            <button onclick="irFavorito()" id="favoritos"></button>
+            <button onclick="irCadastro()" id="dashboard"></button>
+        </div>
+    </div>
+
+    <section class="slider">
+        <div class="slider-content">
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+
+            <div class="slide-box primeiro" >
+                <video src="img/Banner-PATECH (pc).mp4" alt="slide1"></video>
+            </div>
+
+            <div class="slide-box" >
+                <video src="img/Banner-PATECH (tablet).mp4" alt="slide2" ></video>
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+    
+    <section class="novidades">
+        <h1> Novidades </h1>
+        <div class="itensNovos">
+            <div class="item01">
+                <img src="img/Novidades1.png" class="produtos"> <br> 
+                <figcaption> Gabinete Gamer Pichau Atom, Mini-Tower, Lateral de Vidro, Com 1 Fan, Preto. <br> <p> R$ 139,99 </p> </figcaption>
+            </div>
+
+            <div class="item01">
+                 <img src="img/Novidades2.png" class="produtos"> 
+                <br><figcaption> Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol, Preto, ZNO-RUST100-BL01 <br> <p> R$ 149,99 </p>  </figcaption>
+            </div>
+
+            <div class="item01">
+                <img src="img/Novidades3.png" class="produtos"> <br>
+                <figcaption> Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte, Preto <br> <p>R$ 216,75</p> </figcaption>
+            </div>
+        </div> 
+    </section>
+
+    <section class="Amarelo">
+        <h1> Na Patech tem </h1>
+        <div class="bgAmarelo">
+            
+                <div class="hardware">
+                    <img src="img/produto1.png" class="categorias" alt="hardware">
+                </div>
+
+                <div class="periferico">
+                    <img src="img/produto2.png"  class="categorias" alt="perifericos">
+                </div>
+
+                <div class="eletronicos">
+                    <img src="img/produto4.png" class="categorias" alt="eletronicos">
+                </div>
+
+                <div class="redes">
+                    <img src="img/produto5.png"  class="categorias" alt="redes">
+                </div>
+           
+                <div class="acessorios">
+                    <img src="img/produto6.png" class="categorias" alt="acessorios">
+                </div>
+        </div>
+    </section>
+
+    <div class="tituloN">
+        <h1> Nossos produtos </h1>
+    </div>
+    <section class="nossosProdutos">
+        <div class="nossasPecas">
+            <div class="modais"><!--Produto 1-->
+                <button class="abrir-modal">
+                    <img src="img/peca1.png" class="card-produto">
+                    <figcaption class="legenda-card"> Processador Intel Core i3-10100F, 3.6GHz (4.3GHz Max Boost) <p>R$ 629,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca1.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM"> Processador Intel </h1>
+                                <figcaption class="legenda-conteudo"> Processador Intel Core i3-10100F, 3.6GHz (4.3GHz Max Boost)</figcaption>
+                                <p class="preco-antes"> <del> R$ 987,99 </del> </p>
+                                <p class="precos">R$ 629,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!--Produto 2-->
+                <button class="abrir-modal">
+                    <img src="img/peca2.png" class="card-produto">
+                    <figcaption class="legenda-card"> Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo) <p>R$ 599,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca2.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM"> Processador Ryzen </h1>
+                                <figcaption class="legenda-conteudo"> Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo)</figcaption>
+                                <p class="preco-antes"> <del> R$ 654,99 </del> </p>
+                                <p class="precos">R$ 599,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!--Produto 3-->
+                <button class="abrir-modal">
+                    <img src="img/peca3.png" class="card-produto">
+                    <figcaption class="legenda-card">Memória DDR5 Kingston Fury SuperFrame, RGB, 16GB, 5600Mhz<p>R$ 420,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca3.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM"> Memória DDR5 </h1>
+                                <figcaption class="legenda-conteudo"> Memória DDR5 Kingston Fury SuperFrame, RGB, 16GB, 5600Mhz</figcaption>
+                                <p class="preco-antes"> <del> R$ 554,99 </del> </p>
+                                <p class="precos">R$ 420,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!--Produto 4-->
+                <button class="abrir-modal">
+                    <img src="img/peca4.png" class="card-produto">
+                    <figcaption class="legenda-card">Placa Mãe Gigabyte B550M Aorus Elite, DDR4, Socket AMD AM4, M-ATX<p>R$ 849,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca4.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM"> Placa Mãe Gigabyte </h1>
+                                <figcaption class="legenda-conteudo"> Placa Mãe Gigabyte B550M Aorus Elite, DDR4, Socket AMD AM4, M-ATX </figcaption>
+                                <p class="preco-antes"> <del> R$ 954,99 </del> </p>
+                                <p class="precos">R$ 849,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!--Produto 5-->
+                <button class="abrir-modal">
+                    <img src="img/peca5.png" class="card-produto">
+                    <figcaption class="legenda-card">Placa Mãe ASRock B450M Steel Legend, DDR4, Socket AMD AM4, M-ATX<p>R$ 789,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca5.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Placa Mãe ASRock</h1>
+                                <figcaption class="legenda-conteudo">Placa Mãe ASRock B450M Steel Legend, DDR4, Socket AMD AM4, M-ATX</figcaption>
+                                <p class="preco-antes"> <del> R$ 976,99 </del> </p>
+                                <p class="precos">R$ 789,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 6 -->
+                <button class="abrir-modal">
+                    <img src="img/peca6.png" class="card-produto">
+                    <figcaption class="legenda-card">Memória Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz<p>R$ 629,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca6.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Memória Corsair  </h1>
+                                <figcaption class="legenda-conteudo">Memória Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz</figcaption>
+                                <p class="preco-antes"> <del> R$ 854,99 </del> </p>
+                                <p class="precos">R$ 629,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 7 -->
+                <button class="abrir-modal">
+                    <img src="img/peca7.png" class="card-produto">
+                    <figcaption class="legenda-card">Processador AMD Ryzen 5 5600GT, 3.6 GHz, (4.6GHz Max Turbo)<p>R$ 1222,21</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca7.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Processador AMD Ryzen </h1>
+                                <figcaption class="legenda-conteudo">Processador AMD Ryzen 5 5600GT, 3.6 GHz, (4.6GHz Max Turbo)</figcaption>
+                                <p class="preco-antes"> <del> R$ 1554,99 </del> </p>
+                                <p class="precos">R$ 1222,21</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 8 -->
+                <button class="abrir-modal">
+                    <img src="img/peca8.png" class="card-produto">
+                    <figcaption class="legenda-card">Gabinete Gamer, Mini-Tower, Lateral de Vidro, Com 1 Fan, PG-ATOM-BK<p>R$ 129,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca8.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Gabinete Gamer</h1>
+                                <figcaption class="legenda-conteudo">Gabinete Gamer, Mini-Tower, Lateral de Vidro, Com 1 Fan, PG-ATOM-BK</figcaption>
+                                <p class="preco-antes"> <del> R$ 181,99 </del> </p>
+                                <p class="precos">R$ 129,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 9 -->
+                <button class="abrir-modal">
+                    <img src="img/peca9.png" class="card-produto">
+                    <figcaption class="legenda-card">Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)<p>R$ 538,03</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca9.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Processador AMD Ryzen</h1>
+                                <figcaption class="legenda-conteudo">Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)</figcaption>
+                                <p class="preco-antes"> <del> R$ 750,99 </del> </p>
+                                <p class="precos">R$ 538,03</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 10 -->
+                <button class="abrir-modal">
+                    <img src="img/peca10.png" class="card-produto">
+                    <figcaption class="legenda-card"> Memória Kingston, 16GB (1x16GB), DDR4, 3200MHz, C22, KVR32N22S8-16 <p>R$ 289,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca10.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Memória Kingston</h1>
+                                <figcaption class="legenda-conteudo">Memória Kingston, 16GB (1x16GB), DDR4, 3200MHz, C22, KVR32N22S8-16</figcaption>
+                                <p class="preco-antes"> <del> R$ 342,99 </del> </p>
+                                <p class="precos">R$ 289,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 11 -->
+                <button class="abrir-modal">
+                    <img src="img/peca11.png" class="card-produto">
+                    <figcaption class="legenda-card">Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte<p>R$ 333,32</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca11.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Microfone Gamer</h1>
+                                <figcaption class="legenda-conteudo">Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte preto</figcaption>
+                                <p class="preco-antes"> <del> R$ 412,99 </del> </p>
+                                <p class="precos">R$ 333,32</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 12 -->
+                <button class="abrir-modal">
+                    <img src="img/peca12.png" class="card-produto">
+                    <figcaption class="legenda-card">Processador Intel Core I5 13400f, 2.5GHz (4.6GHz Turbo)<p>R$ 929,57</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca12.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Processador Intel</h1>
+                                <figcaption class="legenda-conteudo">Processador Intel Core I5 13400f, 2.5GHz (4.6GHz Turbo)</figcaption>
+                                <p class="preco-antes"> <del> R$ 1121,99 </del> </p>
+                                <p class="precos">R$ 929,57</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 13 -->
+                <button class="abrir-modal">
+                    <img src="img/peca13.png" class="card-produto">
+                    <figcaption class="legenda-card">Placa Mãe MSI B860M Gaming Plus WiFi, DDR5, LGA1851, M-ATX<p>R$ 1.803,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca13.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Placa Mãe</h1>
+                                <figcaption class="legenda-conteudo">Placa Mãe MSI B860M Gaming Plus WiFi, DDR5, LGA1851, M-ATX</figcaption>
+                                <p class="preco-antes"> <del> R$ 2.105,99 </del> </p>
+                                <p class="precos">R$ 1.803,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 14 -->
+                <button class="abrir-modal">
+                    <img src="img/peca14.png" class="card-produto">
+                    <figcaption class="legenda-card">Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol<p>R$ 352,64</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca14.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Suporte Articulado</h1>
+                                <figcaption class="legenda-conteudo">Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol </figcaption>
+                                <p class="preco-antes"> <del> R$ 450,99 </del> </p>
+                                <p class="precos">R$ 352,64</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais"> <!-- Produto 15 -->
+                <button class="abrir-modal">
+                    <img src="img/peca15.png" class="card-produto">
+                    <figcaption class="legenda-card">Placa de Vídeo XFX Radeon RX 9060 XT Gaming Edition OC White, 8GB, GDDR6, 128-bit<p>R$ 2.379,99</p></figcaption>
+                </button>
+
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca15.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Placa de Vídeo</h1>
+                                <figcaption class="legenda-conteudo">Placa de Vídeo XFX Radeon RX 9060 XT Gaming Edition OC White, 8GB, GDDR6, 128-bit</figcaption>
+                                <p class="preco-antes"> <del> R$ 2.745,99 </del> </p>
+                                <p class="precos">R$ 2.379,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 16 -->
+            <div class="modais">
+                <button class="abrir-modal">
+                    <img src="img/peca16.png" class="card-produto">
+                    <figcaption class="legenda-card">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte<p>R$ 149,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca16.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Gabinete Gamer</h1>
+                                <figcaption class="legenda-conteudo">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte</figcaption>
+                                <p class="preco-antes"> <del> R$ 246,99 </del> </p>
+                                <p class="precos">R$ 149,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <section class="rodapeAzul">
+        <div class="bgAzul">
+            <div class="imgRodape">
+                <a href="#usr"><img src="img/logo-rodape.png" class="logoRodape"> </a>
+            </div>
+            <div class="conheca">
+                <div class="tituloC">
+                    <h1> Conheça-nos </h1>
+                </div>
+            <a href="../Sobre/index.html"> <p> Sobre a Patech </p> </a> 
+            <a href="../Sobre/index.html"> <p> Acessibilidade </p> </a> 
+            <a href="../Sobre/index.html"> <p> Nosso objetivo </p> </a>
+            </div>
+
+            <div class="redesSociais">
+                <div class="tituloR">
+                    <h1> Redes Sociais </h1>
+                </div>
+                <a href="https://www.instagram.com/"><p> Instagram </p> </a>
+                <a href="https://www.youtube.com/"><p> Youtube </p> </a> 
+                <a href="https://x.com/"><p> Twitter </p> </a> 
+                <a href="https://www.facebook.com/"><p> Facebook </p> </a> 
+            </div>
+        
+            <div class="ajuda">
+                <div class="tituloA">
+                    <h1> Ajuda </h1>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> </a>  <p> Fale conosco </p>
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.0">  <p> Termos de uso </p>  </a>  
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.w50j8ib6fwmx"> <p> Termos de aceite </p> </a>   
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.o8zvehntguuq"> <p> Termos de privacidade </p> </a>  
+                </div>
+            </div>
+
+            <div class="formasPagamento">
+                <div class="tituloP">
+                    <h1> Pagamento </h1>
+                </div>
+                    <img src="img/pix.png" class="pagamento">
+                    <img src="img/nfc.png" class="pagamento">
+                    <img src="img/nubank.png" class="pagamento">
+                    <img src="img/visa.png" class="pagamento">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODAL DO CARRINHO -->
+    <div id="modalCarrinho1" class="modal-carrinho1">
+        <div class="modal-conteudo1">
+            <span class="fechar1" onclick="fecharModalCarrinho()">&times;</span>
+                <h2>Seu carrinho</h2>
+                <p>O carrinho está vazio no momento.</p>
+        </div>
+    </div>
+
+    <!-- MODAL DOS FAVORITOS  -->
+    <div id="modalFavoritos1" class="modal-favoritos1">
+        <div class="modal-conteudo1">
+            <span class="fechar1" onclick="fecharModalFavoritos()">&times;</span>
+                <h2>Sua lista</h2>
+                <p>Entre na sua conta ou faça cadastro para adicionar produtos a sua lista! </p>
+            <div class="botoesAcaoes1"> 
+                <button onclick="irCadastro()" class="btnRed"> Fazer cadastro </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
