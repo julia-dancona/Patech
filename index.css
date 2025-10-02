@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -30,6 +31,11 @@ a {
   border: none;
   color: #ffff;
   text-decoration: none;
+}
+
+a:hover{
+  color: #F2C029;
+  transition: 0.5s;
 }
 
 p, figcaption{
@@ -61,24 +67,106 @@ p, figcaption{
 }
 
 #usr {
-  background: url("img/iconePesquisa.png") no-repeat left / 4.3%;
-  padding-left: 20px;
+  background: url("img/iconePesquisa.png") no-repeat left / 2.4em;
+  padding-left: 40px;
+  border-radius: 5px;
   height: 50px;
-  width: 60%;
-  font-size: 14px;
+  width: 90%;
   background-color: whitesmoke;
   border: 1px solid #ddd;
+  font-size: 18px;
   margin: 15px;
-  border-radius: 5px;
 }
 
-.Pesquise{
-  width: 50%;
-  background: #0050a3;
+#imagemAll{
+  background: url('img/produtoAll.png') no-repeat left;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  color: #faefce;
   display: flex;
-  flex-direction: column;
+}
+
+#imagemHdware{
+  background: url("img/produto1.png") no-repeat left;
+  width: 250px;
+  height: 350px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#imagemPeri{
+  background: url("img/produto2.png") no-repeat left;
+  width: 250px;
+  height: 350px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#imagemEletro{
+  background: url("img/produto3.png") no-repeat left;
+  width: 250px;
+  height: 350px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#imagemRedes{
+  background: url("img/produto4.png") no-repeat left;
+  width: 250px;
+  height: 350px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#imagemAcess{
+  background: url("img/produto5.png") no-repeat left;
+  width: 250px;
+  height: 350px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.buscar{
+  margin-left: 25%;
+  width: 100%;
+  background: #ddd;
+  display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
+}
+
+#listaProdutos{
+  display: block;
+  width: 95%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#listaProdutos li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ddd;
+  background: #f6f6f6;
+  padding: 12px;
+}
+
+#listaProdutos li a:hover{
+  background: #eee;
+}
+
+.item-name{
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 input::placeholder {
@@ -272,13 +360,13 @@ h1{
   align-items: center;
 }
 
-.hardware, .periferico, .eletronicos, .redes, .acessorios{
+.hardware, .periferico, .eletronicos, .redes, .acessorios, #imagemAll{
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.hardware:hover, .periferico:hover, .eletronicos:hover, .redes:hover, .acessorios:hover {
+.hardware:hover, .periferico:hover, .eletronicos:hover, .redes:hover, .acessorios:hover, #imagemAll:hover{
   transform: translateY(-6px);
 }
 
@@ -586,28 +674,4 @@ button.abrir-modal{
 
 span{
   margin-top: -10%;
-}
-
-#listaProdutos{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-}
-
-#listaProdutos li a{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 18px;
-  border: 1px solid #ddd;
-  background: #f6f6f6;
-  display: flex;
-}
-
-span.item-name{
-  margin-left: 15px;
 }

@@ -72,33 +72,41 @@ document.querySelectorAll(".modais").forEach(modalBox => {
   });
 });
 
+//FILTRO POR CATEGORIA
+    function filtrarProdutos(categoriaSelecionada) {
+        const produtos = document.querySelectorAll('.nossasPecas .modais');
+      
+        produtos.forEach(produto => {
+            const categoriaProduto = produto.getAttribute('data-category');
 
-//PESQUISA FUNCIONA
+            if (categoriaSelecionada === 'all' || categoriaProduto === categoriaSelecionada) {
+                produto.style.display = 'block';
+            } else {
+                produto.style.display = 'none';
+            }
+        });
 
-let inputElement = document.querySelector("input")
-let listElement = document.querySelector("ul")
-let itemElement = document.querySelectorAll("li")
+        const botoes = document.querySelectorAll('.categorias');
+      
+        botoes.forEach(btn => btn.classList.remove('active'));
 
-inputElement.addEventListener("input", (e) => {
-  // Aqui irá executar em toda alteração no input
-})
-
-inputElement.addEventListener("input", (e) => {
-  itemElement.forEach((li) => {
-    // Função executada para cada item da lista
-  })
-})
-
-let inputed = e.target.value.toLowerCase()
-
-inputElement.addEventListener("input", (e) => {
-  let inputed = e.target.value.toLowerCase()
-  itemElement.forEach((li) => {
-    let text = li.textContent.toLowerCase()
-    if(text.includes(inputed)){
-      li.style.display = "block"
-    }else{
-      li.style.display = "none"
+        // Adiciona a classe 'active' ao botão que corresponde à categoria selecionada
+        // Procuramos o botão que tem o mesmo valor no atributo data-category ou alt
+        let botaoAtivo;
+        if (categoriaSelecionada === 'all') {
+            botaoAtivo = document.querySelector('.todos button');
+        } else {
+            // Seleciona o botão que tem a categoria (usando data-category, se você o tiver adicionado)
+            // Se não tiver data-category nos botões, usamos o atributo alt, como na sua estrutura original
+            botaoAtivo = document.querySelector(`.categorias[alt="${categoriaSelecionada}"]`);
+        }
+        
+        if (botaoAtivo) {
+            botaoAtivo.classList.add('active');
+        }
     }
-  })
-})
+
+    // Chama a função ao carregar a página para garantir que todos os produtos estejam visíveis por padrão
+    window.onload = function() {
+        filtrarProdutos('all');
+    };

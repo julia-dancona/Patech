@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../Home/img/shortcuticon.png">
+
+    <title> Patech - História </title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    
+     <!-- fonte do corpo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- fonte do títulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoNav">
+            <a href="../index.html"> <img class="Logo" src="../img/Logo.png" alt="Logo"> </img> <a>
+        </div>
+        
+        <div class="redirecionamento">  
+            <a href="../index.html"> Início </a>
+        <a href=""> Promoções </a>
+        </div>
+        
+        <div class="Pesquise">
+            <input type="text" class='pesquisa' id="usr" placeholder="Pesquise na Patech"></input>
+        </div>
+
+        <div class="icones">
+            <button onclick="irCarrinho()" id="carrinho"></button>
+            <button onclick="irFavorito()" id="favoritos"></button>
+            <button onclick="irCadastro()" id="dashboard"></button>
+        </div>
+    </div>
+
+    <section class="slider">
+        <div class="slider-content">
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+
+            <div class="slide-box primeiro" >
+                <video src="img/Banner-PATECH (pc).mp4" alt="slide1"></video>
+            </div>
+
+            <div class="slide-box" >
+                <video src="img/Banner-PATECH (tablet).mp4" alt="slide2" ></video>
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre01"  id=sobreNos> <!-- SOBRE A PATECH -->
+        <div class="sobre1">
+            <div class="tituloS">
+                <h1> Sobre a Patech </h1>
+            </div>
+            <img src="img/Sobre.png" alt="FotoPatech" class="imgSobre"> 
+        </div>
+
+        <div class="texto1">
+            <p> A Patech nasceu da paixão por tecnologia e do desejo de transformar a forma como as pessoas se conectam com o mundo digital. Mais do que apenas uma loja online, somos um projeto idealizado por entusiastas da área, com o compromisso de oferecer uma experiência de compra segura, acessível e verdadeiramente diferenciada. </p>
+            <p> Desde o início, buscamos unir conhecimento técnico, atendimento de qualidade e uma curadoria criteriosa de produtos para entregar mais do que vendas: entregamos confiança. Cada cliente é parte essencial da nossa jornada, por isso prezamos por um relacionamento próximo, transparente e com aquele toque de personalidade única que só a Patech tem.</p>
+            <p> Com uma seleção completa de eletrônicos, periféricos, acessórios gamer, hardware e muito mais, queremos ser sua referência número um em tecnologia. Acreditamos que inovar não é apenas oferecer o que há de mais moderno, mas também facilitar o acesso, educar o consumidor e proporcionar uma jornada de compra prática, informativa e inspiradora. </p>
+            <p> Seja você um gamer, um profissional da área, um curioso por novidades ou alguém em busca do melhor custo-benefício, a Patech é o seu lugar. Estamos aqui para acompanhar cada passo da sua evolução tecnológica. </p>
+        </div>
+    </section>
+
+    <section class="sobre02"> <!-- SOBRE A PATECH -->
+        <div class="texto2">
+            <p> Por trás de cada clique, embalagem e atendimento, existe um time apaixonado que acompanha as mudanças do mercado e antecipa as necessidades dos nossos clientes. Valorizamos o detalhe, a escolha certa e a entrega que surpreende — porque entendemos que cada compra é um investimento, não apenas financeiro, mas também de tempo, confiança e expectativa. </p>
+            <p> A Patech cresce lado a lado com você, evoluindo a cada feedback, ampliando nosso catálogo com propósito e otimizando processos para oferecer mais agilidade, eficiência e segurança. Buscamos constantemente novas formas de agregar valor à sua experiência, seja com informações claras, navegação intuitiva ou suporte que resolve.</p>
+            <p> Nosso compromisso é com a qualidade em todas as etapas. Desde a curadoria dos produtos até o pós-venda, tudo é pensado para gerar satisfação real. Valorizamos relações duradouras e acreditamos que a tecnologia deve simplificar a vida, conectar pessoas e abrir caminhos — nunca criar barreiras. </p>
+            <p> Seja qual for sua necessidade ou nível de conhecimento, você sempre terá espaço aqui. Porque para nós, cada cliente importa. E cada jornada tecnológica merece ser bem acompanhada. </p>
+        </div>
+
+        <div class="sobre2">
+            <img src="img/sobre2.png" alt="FotoPatech" class="imgSobre1"> 
+        </div>
+    </section>
+
+     <section class="sobre03" id="acessibilidade"> <!-- ACESSIBILIDADE -->
+        <div class="sobre3">
+            <div class="tituloS">
+                <h1> Acessibilidade </h1>
+            </div>
+            <img src="img/acessibilidadeIMG.png" alt="FotoPatech" class="imgSobre"> 
+        </div>
+
+        <div class="texto3"> 
+            <p> Na Patech, acreditamos que a tecnologia deve ser acessível a todos. Por isso, desenvolvemos nosso site com foco em navegação inclusiva, garantindo que pessoas com diferentes necessidades possam utilizar a plataforma com conforto e autonomia. </p>
+            <p> Adotamos boas práticas de acessibilidade digital, como contrastes adequados, textos legíveis, estrutura clara de conteúdo e compatibilidade com leitores de tela e teclados assistivos. Nosso objetivo é oferecer uma experiência fácil e funcional para todos os perfis de usuário. </p>
+            <p> A inclusão é parte dos nossos valores. Estamos sempre abertos a sugestões para melhorar e corrigir eventuais barreiras. Caso você tenha alguma dificuldade durante a navegação, nossa equipe está pronta para ajudar. </p>
+        </div>
+    </section>
+
+    <section class="sobre04" id="objetivo">  <!-- NOSSO OBJETIVO -->
+        <div class="texto4">
+            <p> O principal objetivo da Patech é oferecer uma experiência de compra segura, acessível e inteligente no universo da tecnologia, conectando pessoas às melhores soluções em eletrônicos, periféricos e acessórios, com qualidade, transparência e atendimento humano. </p>
+            <p> Mais do que vender produtos, buscamos facilitar o acesso à tecnologia, promover confiança em cada etapa da jornada do cliente e nos tornar uma referência de inovação com propósito no mercado digital. </p>
+            <p> Para isso, investimos constantemente em conhecimento técnico, parcerias estratégicas e no aprimoramento da experiência do usuário, garantindo que cada interação seja simples, eficiente e personalizada. Nosso compromisso é acompanhar a evolução tecnológica e estar sempre um passo à frente para atender às necessidades e expectativas dos nossos clientes.</p>
+            <p> Além disso, valorizamos o relacionamento próximo e transparente com nossos clientes, acreditando que um suporte dedicado e uma comunicação clara são essenciais para construir confiança e fidelidade. A Patech não é apenas uma empresa, mas uma comunidade que cresce junto com seus clientes, sempre buscando inovar com responsabilidade e respeito. </p>
+        </div>
+
+        <div class="sobre4">
+            <div class="tituloS">
+                <h1> Nosso objetivo </h1>
+            </div>
+            <img src="img/objetivoIMG.png" alt="FotoPatech" class="imgSobre1"> 
+        </div>
+    </section>
+
+      <section class="rodapeAzul">
+        <div class="bgAzul">
+            <div class="imgRodape">
+                <a href="#sobreNos"> <img src="img/logo-rodape.png" class="logoRodape"> </a> 
+            </div>
+            <div class="conheca">
+                <div class="tituloC">
+                    <h1> Conheça-nos </h1>
+                </div>
+            <a href="#sobreNos"> <p> Sobre a Patech </p> </a> 
+            <a href="#acessibilidade"> <p> Acessibilidade </p> </a> 
+            <a href="#objetivo"> <p> Nosso objetivo </p> </a>
+            </div>
+
+            <div class="redesSociais">
+                <div class="tituloR">
+                    <h1> Redes Sociais </h1>
+                </div>
+                <a href="https://www.instagram.com/"><p> Instagram </p> </a>
+                <a href="https://www.youtube.com/"><p> Youtube </p> </a> 
+                <a href="https://x.com/"><p> Twitter </p> </a> 
+                <a href="https://www.facebook.com/"><p> Facebook </p> </a> 
+            </div>
+        
+            <div class="ajuda">
+                <div class="tituloA">
+                    <h1> Ajuda </h1>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> </a>  <p> Fale conosco </p>
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.0">  <p> Termos de uso </p>  </a>  
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.w50j8ib6fwmx"> <p> Termos de aceite </p> </a>   
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.o8zvehntguuq"> <p> Termos de privacidade </p> </a>   
+                </div>
+            </div>
+
+            <div class="formasPagamento">
+                <div class="tituloP">
+                    <h1> Pagamento </h1>
+                </div>
+                    <img src="img/pix.png" class="pagamento">
+                    <img src="img/nfc.png" class="pagamento">
+                    <img src="img/nubank.png" class="pagamento">
+                    <img src="img/visa.png" class="pagamento">
+            </div>
+
+        </div>
+    </section>
+
+    
+    <!-- MODAL DO CARRINHO -->
+    <div id="modalCarrinho" class="modal-carrinho">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModalCarrinho()">&times;</span>
+            <h2>Seu carrinho</h2>
+            <p>O carrinho está vazio no momento.</p>
+        </div>
+    </div>
+
+    <!-- MODAL DOS FAVORITOS  -->
+    <div id="modalFavoritos" class="modal-favoritos">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModalFavoritos()">&times;</span>
+            <h2>Sua lista</h2>
+            <p>Entre na sua conta ou faça cadastro para adicionar produtos a sua lista! </p>
+            <div class="botoesAcaoes1"> 
+                <button onclick="irCadastro()" class="btnRed"> Fazer cadastro </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

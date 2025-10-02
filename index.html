@@ -32,32 +32,37 @@
         <a href=""> Promoções </a>
         </div>
         
-        <div class="Pesquise">
-            <input type="text" class='pesquisa' id="usr" placeholder="Pesquise na Patech"></input>
-
+        <div class="buscar">
+            <input type="text" id="usr" placeholder="Pesquise na Patech"></input>
             <ul id="listaProdutos">
-                <li> <a href="#">
-                        <img width="45"
-                            src="img/produto1.png">
-                        <span class="item-name">Hardware</span>
+                <li>
+                    <a href="#">
+                        <img width="50px" src="img/peca1.png">
+                        <span class="item-name">Processador</span>
                     </a>
                 </li>
-                <li> <a href="#">
-                    <img width="45"
-                        src="img/produto1.png">
-                    <span class="item-name">Hardware</span>
+                <li>
+                    <a href="#">
+                        <img width="50px" src="img/peca1.png">
+                        <span class="item-name">Processador</span>
                     </a>
                 </li>
-                <li> <a href="#">
-                    <img width="45"
-                        src="img/produto1.png">
-                    <span class="item-name">Hardware</span>
+                <li>
+                    <a href="#">
+                        <img width="50px" src="img/peca1.png">
+                        <span class="item-name">Processador</span>
                     </a>
                 </li>
-                <li> <a href="#">
-                    <img width="45"
-                        src="img/produto1.png">
-                    <span class="item-name">Hardware</span>
+                <li>
+                    <a href="#">
+                        <img width="50px" src="img/peca1.png">
+                        <span class="item-name">Processador</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img width="50px" src="img/peca1.png">
+                        <span class="item-name">Processador</span>
                     </a>
                 </li>
             </ul>
@@ -116,37 +121,41 @@
     </section>
 
     <section class="Amarelo">
-        <h1> Na Patech tem </h1>
-        <div class="bgAmarelo">
-            
-                <div class="hardware">
-                    <img src="img/produto1.png" class="categorias" alt="hardware">
-                </div>
-
-                <div class="periferico">
-                    <img src="img/produto2.png"  class="categorias" alt="perifericos">
-                </div>
-
-                <div class="eletronicos">
-                    <img src="img/produto4.png" class="categorias" alt="eletronicos">
-                </div>
-
-                <div class="redes">
-                    <img src="img/produto5.png"  class="categorias" alt="redes">
-                </div>
-           
-                <div class="acessorios">
-                    <img src="img/produto6.png" class="categorias" alt="acessorios">
-                </div>
+    <h1> Na Patech tem </h1>
+    <div class="bgAmarelo">
+        <div class="todos">
+            <button onclick="filtrarProdutos('all')" id="imagemAll" class="categorias" data-category="all" lt="todos">TODOS</button>
         </div>
-    </section>
+        
+        <div class="hardware">
+            <button onclick="filtrarProdutos('hardware')" id="imagemHdware" class="categorias" data-category="hardware" alt="hardware"></button>
+        </div>
+
+        <div class="periferico">
+            <button onclick="filtrarProdutos('perifericos')" id="imagemPeri" class="categorias" data-category="perifericos" alt="perifericos"></button>
+        </div>
+
+        <div class="eletronicos">
+            <button onclick="filtrarProdutos('eletronicos')" id="imagemEletro" class="categorias" data-category="eletronicos" alt="eletronicos"></button>
+        </div>
+
+        <div class="redes">
+            <button onclick="filtrarProdutos('redes')" id="imagemRedes" class="categorias" data-category="redes" alt="redes"></button>
+        </div>
+        
+        <div class="acessorios">
+            <button onclick="filtrarProdutos('acessorios')" id="imagemAcess" class="categorias" data-category="acessorios" alt="acessorios"></button>
+        </div>
+    </div>
+</section>
 
     <div class="tituloN">
         <h1> Nossos produtos </h1>
     </div>
     <section class="nossosProdutos">
         <div class="nossasPecas">
-            <div class="modais"><!--Produto 1-->
+
+            <div class="modais" data-category="hardware"><!--Produto 1-->
                 <button class="abrir-modal">
                     <img src="img/peca1.png" class="card-produto">
                     <figcaption class="legenda-card"> Processador Intel Core i3-10100F, 3.6GHz (4.3GHz Max Boost) <p>R$ 629,99</p></figcaption>
@@ -173,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!--Produto 2-->
+            <div class="modais" data-category="hardware"> <!--Produto 2-->
                 <button class="abrir-modal">
                     <img src="img/peca2.png" class="card-produto">
                     <figcaption class="legenda-card"> Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo) <p>R$ 599,00</p></figcaption>
@@ -200,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!--Produto 3-->
+            <div class="modais" data-category="hardware"> <!--Produto 3-->
                 <button class="abrir-modal">
                     <img src="img/peca3.png" class="card-produto">
                     <figcaption class="legenda-card">Memória DDR5 Kingston Fury SuperFrame, RGB, 16GB, 5600Mhz<p>R$ 420,90</p></figcaption>
@@ -227,7 +236,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!--Produto 4-->
+            <div class="modais" data-category="hardware"> <!--Produto 4-->
                 <button class="abrir-modal">
                     <img src="img/peca4.png" class="card-produto">
                     <figcaption class="legenda-card">Placa Mãe Gigabyte B550M Aorus Elite, DDR4, Socket AMD AM4, M-ATX<p>R$ 849,99</p></figcaption>
@@ -254,7 +263,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!--Produto 5-->
+            <div class="modais" data-category="hardware"> <!--Produto 5-->
                 <button class="abrir-modal">
                     <img src="img/peca5.png" class="card-produto">
                     <figcaption class="legenda-card">Placa Mãe ASRock B450M Steel Legend, DDR4, Socket AMD AM4, M-ATX<p>R$ 789,99</p></figcaption>
@@ -281,7 +290,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 6 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 6 -->
                 <button class="abrir-modal">
                     <img src="img/peca6.png" class="card-produto">
                     <figcaption class="legenda-card">Memória Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz<p>R$ 629,99</p></figcaption>
@@ -308,7 +317,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 7 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 7 -->
                 <button class="abrir-modal">
                     <img src="img/peca7.png" class="card-produto">
                     <figcaption class="legenda-card">Processador AMD Ryzen 5 5600GT, 3.6 GHz, (4.6GHz Max Turbo)<p>R$ 1222,21</p></figcaption>
@@ -335,7 +344,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 8 -->
+            <div class="modais" data-category="perifericos"> <!-- Produto 8 -->
                 <button class="abrir-modal">
                     <img src="img/peca8.png" class="card-produto">
                     <figcaption class="legenda-card">Gabinete Gamer, Mini-Tower, Lateral de Vidro, Com 1 Fan, PG-ATOM-BK<p>R$ 129,99</p></figcaption>
@@ -362,7 +371,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 9 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 9 -->
                 <button class="abrir-modal">
                     <img src="img/peca9.png" class="card-produto">
                     <figcaption class="legenda-card">Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)<p>R$ 538,03</p></figcaption>
@@ -389,7 +398,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 10 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 10 -->
                 <button class="abrir-modal">
                     <img src="img/peca10.png" class="card-produto">
                     <figcaption class="legenda-card"> Memória Kingston, 16GB (1x16GB), DDR4, 3200MHz, C22, KVR32N22S8-16 <p>R$ 289,99</p></figcaption>
@@ -416,7 +425,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 11 -->
+            <div class="modais" data-category="perifericos"> <!-- Produto 11 -->
                 <button class="abrir-modal">
                     <img src="img/peca11.png" class="card-produto">
                     <figcaption class="legenda-card">Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte<p>R$ 333,32</p></figcaption>
@@ -443,7 +452,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 12 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 12 -->
                 <button class="abrir-modal">
                     <img src="img/peca12.png" class="card-produto">
                     <figcaption class="legenda-card">Processador Intel Core I5 13400f, 2.5GHz (4.6GHz Turbo)<p>R$ 929,57</p></figcaption>
@@ -470,7 +479,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 13 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 13 -->
                 <button class="abrir-modal">
                     <img src="img/peca13.png" class="card-produto">
                     <figcaption class="legenda-card">Placa Mãe MSI B860M Gaming Plus WiFi, DDR5, LGA1851, M-ATX<p>R$ 1.803,99</p></figcaption>
@@ -497,7 +506,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 14 -->
+            <div class="modais" data-category="perifericos"> <!-- Produto 14 -->
                 <button class="abrir-modal">
                     <img src="img/peca14.png" class="card-produto">
                     <figcaption class="legenda-card">Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol<p>R$ 352,64</p></figcaption>
@@ -524,7 +533,7 @@
                 </div>
             </div>
 
-            <div class="modais"> <!-- Produto 15 -->
+            <div class="modais" data-category="hardware"> <!-- Produto 15 -->
                 <button class="abrir-modal">
                     <img src="img/peca15.png" class="card-produto">
                     <figcaption class="legenda-card">Placa de Vídeo XFX Radeon RX 9060 XT Gaming Edition OC White, 8GB, GDDR6, 128-bit<p>R$ 2.379,99</p></figcaption>
@@ -552,8 +561,7 @@
                 </div>
             </div>
 
-            <!-- Produto 16 -->
-            <div class="modais">
+            <div class="modais" data-category="perifericos"> <!-- Produto 16 -->
                 <button class="abrir-modal">
                     <img src="img/peca16.png" class="card-produto">
                     <figcaption class="legenda-card">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte<p>R$ 149,90</p></figcaption>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../Home/img/shortcuticon.png">
+
+    <title> Usuário </title>
+
+    <link rel="stylesheet" href="usuario.css">
+    <script src="usuario.js" defer></script>
+    
+     <!-- fonte do corpo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- fonte do títulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="logoNav">
+            <a href="../index.html"> <img class="Logo" src="../img/Logo.png" alt="Logo"><a>
+        </div>
+                
+        <div class="redirecionamento">  
+        <a href="../index.html"> Início </a>
+        <a href=""> Promoções </a>
+        </div>
+        
+        <div class="Pesquise">
+            <input type="text" class='pesquisa' id="usr" placeholder="Pesquise na Patech"></input>
+        </div>
+
+        <div class="icones">
+            <button onclick="irCarrinho()" id="carrinho"></button>
+            <button onclick="irFavorito()" id="favoritos"></button>
+            <button onclick="irCadastro()" id="dashboard"></button>
+        </div>
+    </div>
+
+    <section class="User">
+        <div class="fotoPerfil">
+            <form id="form">
+                <input type="file" id="image-input" accept="image/*">
+                <button type="submit">Upload Imagem</button>
+            </form>
+        </div>
+        <div class="boasVindas">
+            <h1> Bem vindo(a)!</h1>
+            <p> Aqui você encontra todos os dados da sua conta!</p>
+        </div>
+    </section>
+    
+    <div class="botoesDados">
+        <button onclick="mostrarDados('Usuario')" class="btnAmarelo" id="Modal"> <p> Meus dados </p></button>
+        <button onclick="mostrarDados('Pedidos')" class="btnAmarelo"> <p> Meus pedidos </p></button>
+        <button onclick="mostrarDados('Lista')" class="btnAmarelo"> <p> Minha lista </p></button>
+        <button onclick="mostrarDados('Enderecos')" class="btnAmarelo"> <p> Endereços salvos </p></button>
+    </div>
+
+    <section class="(1)" id="dadosUsuario">
+            <h2 class="titulos"> Meus dados </h2>
+        <div class="dados">
+            <div class="coluna1">
+                <form id="formPerfil"> 
+                    <input type="text" name="nomeCompleto" id="nome" placeholder="Nome completo">
+                    <input type="email" name="emailUsuario" id="email" placeholder="Email do usuário">
+                    <input type="number" name="cpfUsuario" id="cpf" placeholder="CPF do usuário">
+                    <button type="submit" class="btnRed"> Alterar dados </button>
+                </form>
+            </div>
+            <div class="coluna2">
+                <input type="password" name="senhaUsuario" id="usuarioDados" placeholder="Senha Usuário">
+            </div>
+
+            <div class="botoesAcaoes">
+                <button onclick="logout()" alt="sairConta" class="btnRed"> Sair da conta </button>
+                <button onclick="" alt="excluirConta" class="btnRed"> Excluir conta </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="(2)" id="dadosPedidos">
+        <h2 class="titulos"> Meus pedidos  </h2>
+        <div class="dados">
+            <p> Parece que você não fez nenhum pedido nos últimos 3 meses </p>
+        </div>
+    </section>
+
+    <section class="(3)" id="dadosLista">
+        <h2 class="titulos"> Minha lista  </h2>
+        <div class="dados">
+            <div class="produtosFavoritados">
+                <div class="p1">
+                    <img src="img/peca5.png" class="pecas">
+                    <br> <figcaption> Placa Mae ASRock B450M Steel Legend, DDR4, Socket AMD AM4, M-ATX <br> <p> R$ 789,99 </p> </figcaption>
+                    <div class="botoesAcaoes">
+                        <button onclick="" alt="editarFavoritos" class="btnRed"> Comprar </button>
+                        <button onclick="" alt="excluirFavorito" class="btnRed"> Excluir </button>
+                    </div>
+                </div>
+                <div class="p1">
+                    <img src="img/peca12.png" class="pecas">
+                    <br> <figcaption> Processador Intel Core I5 13400f, 2.5GHz (4.6GHz Turbo) <br> <p> R$ 929,57 </p> </figcaption>
+                    <div class="botoesAcaoes">
+                        <button onclick="" alt="editarFavoritos" class="btnRed"> Comprar </button>
+                        <button onclick="" alt="excluirFavorito" class="btnRed"> Excluir </button>
+                    </div>
+                </div>
+                <div class="p1">
+                    <img src="img/peca6.png" class="pecas">
+                    <br> <figcaption> Memoria Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz <br> <p> R$ 629,99 </p> </figcaption>
+                        <div class="botoesAcaoes">
+                            <button onclick="" alt="editarFavoritos" class="btnRed"> Comprar </button>
+                            <button onclick="" alt="excluirFavorito" class="btnRed"> Excluir </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="(4)" id="dadosEnderecos">
+        <h2 class="titulos"> Endereços salvos  </h2>
+        <div class="dados">
+            <p> Parece que você ainda não cadastrou nenhum endereço! </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <div class="rodapeAzul">
+        <div class="bgAzul">
+
+        <div class="imgRodape">
+        <a href="#usr"><img src="img/logo-rodape.png" class="logoRodape"> </a>
+        </div>
+            <div class="conheca">
+                <div class="tituloC">
+                    <h1> Conheça-nos </h1>
+                </div>
+            <a href="../Sobre/index.html"> <p> Sobre a Patech </p> </a> 
+            <a href="../Sobre/index.html"> <p> Acessibilidade </p> </a> 
+            <a href="../Sobre/index.html"> <p> Nosso objetivo </p> </a>
+            </div>
+
+            <div class="redesSociais">
+                <div class="tituloR">
+                    <h1> Redes Sociais </h1>
+                </div>
+                <a href="https://www.instagram.com/"><p> Instagram </p> </a>
+                <a href="https://www.youtube.com/"><p> Youtube </p> </a> 
+                <a href="https://x.com/"><p> Twitter </p> </a> 
+                <a href="https://www.facebook.com/"><p> Facebook </p> </a> 
+            </div>
+        
+            <div class="ajuda">
+                <div class="tituloA">
+                    <h1> Ajuda </h1>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> </a>  <p> Fale conosco </p>
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.0">  <p> Termos de uso </p>  </a>  
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.w50j8ib6fwmx"> <p> Termos de aceite </p> </a>   
+                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.o8zvehntguuq"> <p> Termos de privacidade </p> </a>  
+                </div>
+            </div>
+
+            <div class="formasPagamento">
+                <div class="tituloP">
+                    <h1> Pagamento </h1>
+                </div>
+                    <img src="img/pix.png" class="pagamento">
+                    <img src="img/nfc.png" class="pagamento">
+                    <img src="img/nubank.png" class="pagamento">
+                    <img src="img/visa.png" class="pagamento">
+            </div>
+
+        </div>
+    
+    </div>
+
+    <!-- MODAL DO CARRINHO -->
+    <div id="modalCarrinho" class="modal-carrinho">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModalCarrinho()">&times;</span>
+            <h2>Seu carrinho</h2>
+            <p>O carrinho está vazio no momento.</p>
+        </div>
+    </div>
+
+        <!-- MODAL DOS FAVORITOS  -->
+    <div id="modalFavoritos" class="modal-favoritos">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModalFavoritos()">&times;</span>
+            <h2>Sua lista</h2>
+            <p>Entre na sua conta ou faça cadastro para adicionar produtos a sua lista! </p>
+            <div class="botoesAcaoes1"> 
+                <button onclick="irCadastro()" class="btnRed"> Fazer cadastro </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
