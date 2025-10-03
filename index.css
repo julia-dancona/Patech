@@ -31,6 +31,7 @@ a {
   border: none;
   color: #ffff;
   text-decoration: none;
+  margin: 5px;
 }
 
 a:hover{
@@ -67,14 +68,14 @@ p, figcaption{
 }
 
 #usr {
-  background: url("img/iconePesquisa.png") no-repeat left / 2.4em;
+  background: url("img/iconePesquisa.png") no-repeat left / 2em;
   padding-left: 40px;
   border-radius: 5px;
-  height: 50px;
+  height: 30px;
   width: 90%;
   background-color: whitesmoke;
   border: 1px solid #ddd;
-  font-size: 18px;
+  font-size: 15px;
   margin: 15px;
 }
 
@@ -141,6 +142,13 @@ p, figcaption{
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 1;
+}
+
+li.no-results{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
 }
 
 #listaProdutos{
@@ -208,36 +216,6 @@ input::placeholder {
   width: 85px;
   cursor: pointer;
 }
-
-/* section.slider {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  overflow: hidden;
-} */
-
-/* .slider-content {
-  width: 400%;
-  height: auto;
-  display: flex;
-  position: relative;
-}
-
-.slider-content input {
-  display: none;
-}
-
-.slide-box {
-  width: 25%;
-  height: auto;
-  position: relative;
-  text-align: center;
-}
-
-.slide-box video {
-  width: 100%;
-} */
 
 .nav-manual,
 .nav-auto {
@@ -374,7 +352,6 @@ h1{
   transform: translateY(-6px);
 }
 
-
 /* NOSSOS PRODUTOS  */
 .tituloN{
   margin-bottom: -5%;
@@ -476,7 +453,6 @@ h1{
 
 .imgRodape{
   display: block;
-
 }
 
 /* MODAL DO CARRINHO */
@@ -678,4 +654,73 @@ button.abrir-modal{
 
 span{
   margin-top: -10%;
+}
+
+/*BANNER*/
+img#banner:hover{
+  transform: none;
+}
+
+.slider-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-image {
+    display: none;
+}
+
+.slider-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Efeito de transição */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Botões de navegação */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Indicadores de slide (dots) */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #0050A3;
 }

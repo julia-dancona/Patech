@@ -30,6 +30,12 @@ a {
   border: none;
   color: #ffff;
   text-decoration: none;
+  margin: 5px;
+}
+
+a:hover{
+  color: #F2C029;
+  transition: 0.5s;
 }
 
 p, figcaption{
@@ -58,6 +64,7 @@ h1{
   background-color: #0050a3;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .Logo {
@@ -68,6 +75,8 @@ h1{
 
 .logoNav{
   margin-left: 2%;
+  display: flex;
+  align-items: center;
 }
 
 #usr {
