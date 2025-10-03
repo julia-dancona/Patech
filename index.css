@@ -140,14 +140,17 @@ p, figcaption{
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #listaProdutos{
   display: block;
-  width: 95%;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 70px;
 }
 
 #listaProdutos li a{
@@ -206,18 +209,19 @@ input::placeholder {
   cursor: pointer;
 }
 
-section.slider {
+/* section.slider {
   margin: 0 auto;
   width: 100%;
   height: auto;
   padding: 0;
   overflow: hidden;
-}
+} */
 
-.slider-content {
+/* .slider-content {
   width: 400%;
   height: auto;
   display: flex;
+  position: relative;
 }
 
 .slider-content input {
@@ -233,7 +237,7 @@ section.slider {
 
 .slide-box video {
   width: 100%;
-}
+} */
 
 .nav-manual,
 .nav-auto {

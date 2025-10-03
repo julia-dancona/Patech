@@ -1,21 +1,21 @@
-var radio = document.querySelector('.manual-btn')
-var cont = 1
+// var radio = document.querySelector('.manual-btn')
+// var cont = 1
 
-document.getElementById('radio1').checked = true
+// document.getElementById('radio1').checked = true
 
-setInterval(() => {
-    proximovideo()
-}, 5000)
+// setInterval(() => {
+//     proximovideo()
+// }, 5000)
 
-function proximovideo(){
-    cont++
+// function proximovideo(){
+//     cont++
 
-    if(cont > 2){
-        cont = 1
-    }
+//     if(cont > 2){
+//         cont = 1
+//     }
 
-    document.getElementById('radio' + cont).checked = true
-}
+//     document.getElementById('radio' + cont).checked = true
+// }
 
 function irCadastro(){
     window.location.href = "../Cadastro-Login"
@@ -110,3 +110,67 @@ document.querySelectorAll(".modais").forEach(modalBox => {
     window.onload = function() {
         filtrarProdutos('all');
     };
+
+fetch('https://fakestoreapi.com/products?limit=5')
+    .then(res => res.json())
+    .then((json) => {
+      console.log(json);
+        const ul = document.getElementById('listaProdutos');
+        json.forEach((item)=>{
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <a href="#">
+              <img width="50px" 
+                src="${item.image}">
+              <span class="item-name">${item.title}</span>
+            </a>
+          `;
+          ul.appendChild(li)
+        })
+    })
+
+    function filtrar() {
+      var input,
+      filter
+      ul,
+      li,
+      a,
+      span,
+      i,
+      txtValue,
+      count = 0
+
+      //PEGGAR ELEMENTOS HTML
+      input = document.getElementById('usr')
+      ul = document.getElementById('listaProdutos')
+
+      //FILTRO
+      filter = input.value.toUpperCase();
+
+      //PEGAR TODAS AS LI DA LISTA
+      li = ul.getElementsByTagName('li');
+
+      //percorrer todos os li
+      for(i = 0; i< li.length; i++){
+        //pegar a tag a do elemento percorrido
+        a = li[i].getElementsByTagName('a')[0];
+        //pegar o texto dentro da tag a
+        txtValue = a.textContent || a.innerText;
+        //verificar se o que o usuario que o usuario digitou bate com o conteudo da tag a
+        if(txtValue.toUpperCase().indexOf(filter) > -1){
+          //vaor bateu
+          li[i].style.display = '';
+          //incremenmntar o contador
+          count++
+          //pegar a tag span do item
+          span = li[i].querySelector('.item-name')
+          if(span){
+            span.innerHTML = txtValue.replace(new RegExp(filter, 'gi'), (match) =>{
+              return '<strong>' + match + '</strong>';
+            })
+          }
+        }else{
+          li[i].style.display = 'none'
+        }
+      }
+    }
