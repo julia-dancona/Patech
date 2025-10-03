@@ -135,7 +135,7 @@ p, figcaption{
 .buscar{
   margin-left: 25%;
   width: 100%;
-  background: #ddd;
+  background:#0050a3;
   display: flex;
   flex-flow: column;
   align-items: center;

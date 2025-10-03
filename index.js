@@ -1,176 +1,207 @@
-// var radio = document.querySelector('.manual-btn')
-// var cont = 1
-
-// document.getElementById('radio1').checked = true
-
-// setInterval(() => {
-//     proximovideo()
-// }, 5000)
-
-// function proximovideo(){
-//     cont++
-
-//     if(cont > 2){
-//         cont = 1
-//     }
-
-//     document.getElementById('radio' + cont).checked = true
-// }
-
-function irCadastro(){
-    window.location.href = "../Cadastro-Login"
+// -------------------------
+// NAVEGAÇÃO / MODAIS / CATEGORIAS (mantive sua lógica)
+// -------------------------
+function irCadastro() {
+  window.location.href = "../Cadastro-Login";
 }
 
-function irCarrinho() { //chama o carrinho pelo id
+function irCarrinho() {
   document.getElementById("modalCarrinho1").style.display = "block";
 }
 function fecharModalCarrinho() {
   document.getElementById("modalCarrinho1").style.display = "none";
 }
 
-// FAVORITOS MODAL
-function irFavorito() { //chama o carrinho pelo id
+function irFavorito() {
   document.getElementById("modalFavoritos1").style.display = "block";
 }
 function fecharModalFavoritos() {
   document.getElementById("modalFavoritos1").style.display = "none";
 }
 
-window.onclick = function(event) {
+// fechar modais clicando fora (carrinho / favoritos)
+window.onclick = function (event) {
   const modalCarrinho = document.getElementById("modalCarrinho1");
   const modalFavoritos = document.getElementById("modalFavoritos1");
 
-  if (event.target === modalCarrinho) {
-    modalCarrinho.style.display = "none";
-  }
-  if (event.target === modalFavoritos) {
-    modalFavoritos.style.display = "none";
-  }
+  if (event.target === modalCarrinho) modalCarrinho.style.display = "none";
+  if (event.target === modalFavoritos) modalFavoritos.style.display = "none";
 };
 
-// PRODUTOS MODAL
-document.querySelectorAll(".modais").forEach(modalBox => {
+// Produto -> abrir modal / fechar X
+document.querySelectorAll(".modais").forEach((modalBox) => {
   const btn = modalBox.querySelector(".abrir-modal");
   const modal = modalBox.querySelector(".modal-Produto");
   const fechar = modalBox.querySelector(".fechar");
 
-  // abrir
-  btn.addEventListener("click", () => {
-    modal.style.display = "block";
-  });
-
-  // fechar no X
-  fechar.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // fechar clicando fora
+  if (btn) {
+    btn.addEventListener("click", () => {
+      if (modal) modal.style.display = "block";
+    });
+  }
+  if (fechar) {
+    fechar.addEventListener("click", () => {
+      if (modal) modal.style.display = "none";
+    });
+  }
+  // fechar clicando fora do modal específico
   window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
+    if (modal && e.target === modal) modal.style.display = "none";
   });
 });
 
-//FILTRO POR CATEGORIA
-    function filtrarProdutos(categoriaSelecionada) {
-        const produtos = document.querySelectorAll('.nossasPecas .modais');
-      
-        produtos.forEach(produto => {
-            const categoriaProduto = produto.getAttribute('data-category');
+function filtrarProdutos(categoriaSelecionada) {
+  const produtos = document.querySelectorAll(".nossasPecas .modais");
 
-            if (categoriaSelecionada === 'all' || categoriaProduto === categoriaSelecionada) {
-                produto.style.display = 'block';
-            } else {
-                produto.style.display = 'none';
-            }
-        });
+  produtos.forEach((produto) => {
+    const categoriaProduto = produto.getAttribute("data-category");
+    if (categoriaSelecionada === "all" || categoriaProduto === categoriaSelecionada) {
+      produto.style.display = "block";
+    } else {
+      produto.style.display = "none";
+    }
+  });
 
-        const botoes = document.querySelectorAll('.categorias');
-      
-        botoes.forEach(btn => btn.classList.remove('active'));
+  const botoes = document.querySelectorAll(".categorias");
+  botoes.forEach((btn) => btn.classList.remove("active"));
 
-        // Adiciona a classe 'active' ao botão que corresponde à categoria selecionada
-        // Procuramos o botão que tem o mesmo valor no atributo data-category ou alt
-        let botaoAtivo;
-        if (categoriaSelecionada === 'all') {
-            botaoAtivo = document.querySelector('.todos button');
-        } else {
-            // Seleciona o botão que tem a categoria (usando data-category, se você o tiver adicionado)
-            // Se não tiver data-category nos botões, usamos o atributo alt, como na sua estrutura original
-            botaoAtivo = document.querySelector(`.categorias[alt="${categoriaSelecionada}"]`);
-        }
-        
-        if (botaoAtivo) {
-            botaoAtivo.classList.add('active');
-        }
+  let botaoAtivo;
+  if (categoriaSelecionada === "all") {
+    botaoAtivo = document.querySelector(".todos button");
+  } else {
+    botaoAtivo = document.querySelector(`.categorias[aria-label="${categoriaSelecionada}"]`);
+  }
+
+  if (botaoAtivo) botaoAtivo.classList.add("active");
+}
+
+window.onload = function () {
+  filtrarProdutos("all");
+  initSearchSuggestions(); // inicializa a busca quando a página carrega
+};
+
+// -------------------------
+// PESQUISA - SUGESTÕES AO DIGITAR (AUTOCOMPLETE)
+// -------------------------
+function initSearchSuggestions() {
+  const input = document.getElementById("usr");
+  const suggestionsEl = document.getElementById("listaProdutos");
+  if (!input || !suggestionsEl) return;
+
+  // Normaliza (remove acentos e deixa minúsculo)
+  const normalize = (s) =>
+    (s || "")
+      .toString()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+
+  // Escapa para usar em regex
+  const escapeReg = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  // Extrai o título do produto diretamente do HTML do seu card.
+  // Ele tenta usar .legenda-card (onde você tem o título + <p>preco</p>) e remove o <p>.
+  function getProductTitle(prodEl) {
+    const fig = prodEl.querySelector(".legenda-card") || prodEl.querySelector(".legenda-conteudo") || prodEl.querySelector(".tituloM");
+    if (!fig) return "";
+    const clone = fig.cloneNode(true);
+    clone.querySelectorAll("p").forEach((n) => n.remove());
+    return clone.textContent.replace(/\s+/g, " ").trim();
+  }
+
+  // Pega imagem do card (se houver)
+  function getProductImage(prodEl) {
+    const img = prodEl.querySelector("img.card-produto") || prodEl.querySelector("img.pecas") || prodEl.querySelector("img");
+    return img ? img.src : "";
+  }
+  
+
+  // monta array de produtos a partir do DOM
+  const nodes = Array.from(document.querySelectorAll(".nossasPecas .modais"));
+  const products = nodes.map((el) => {
+    const title = getProductTitle(el);
+    return {
+      el,
+      title,
+      img: getProductImage(el),
+      norm: normalize(title),
+    };
+  });
+
+  // Limpa sugestões
+  function clearSuggestions() {
+    suggestionsEl.innerHTML = "";
+  }
+
+  // Renderiza uma lista de sugestões (max 8)
+  function renderSuggestions(list, query) {
+    suggestionsEl.innerHTML = "";
+    if (!list.length) {
+      const li = document.createElement("li");
+      li.className = "no-results";
+      li.textContent = "Nenhum produto encontrado";
+      suggestionsEl.appendChild(li);
+      return;
     }
 
-    // Chama a função ao carregar a página para garantir que todos os produtos estejam visíveis por padrão
-    window.onload = function() {
-        filtrarProdutos('all');
-    };
+    list.slice(0, 8).forEach((p) => {
+      const li = document.createElement("li");
+      li.className = "sug-item";
 
-fetch('https://fakestoreapi.com/products?limit=5')
-    .then(res => res.json())
-    .then((json) => {
-      console.log(json);
-        const ul = document.getElementById('listaProdutos');
-        json.forEach((item)=>{
-          const li = document.createElement('li');
-          li.innerHTML = `
-            <a href="#">
-              <img width="50px" 
-                src="${item.image}">
-              <span class="item-name">${item.title}</span>
-            </a>
-          `;
-          ul.appendChild(li)
-        })
-    })
-
-    function filtrar() {
-      var input,
-      filter
-      ul,
-      li,
-      a,
-      span,
-      i,
-      txtValue,
-      count = 0
-
-      //PEGGAR ELEMENTOS HTML
-      input = document.getElementById('usr')
-      ul = document.getElementById('listaProdutos')
-
-      //FILTRO
-      filter = input.value.toUpperCase();
-
-      //PEGAR TODAS AS LI DA LISTA
-      li = ul.getElementsByTagName('li');
-
-      //percorrer todos os li
-      for(i = 0; i< li.length; i++){
-        //pegar a tag a do elemento percorrido
-        a = li[i].getElementsByTagName('a')[0];
-        //pegar o texto dentro da tag a
-        txtValue = a.textContent || a.innerText;
-        //verificar se o que o usuario que o usuario digitou bate com o conteudo da tag a
-        if(txtValue.toUpperCase().indexOf(filter) > -1){
-          //vaor bateu
-          li[i].style.display = '';
-          //incremenmntar o contador
-          count++
-          //pegar a tag span do item
-          span = li[i].querySelector('.item-name')
-          if(span){
-            span.innerHTML = txtValue.replace(new RegExp(filter, 'gi'), (match) =>{
-              return '<strong>' + match + '</strong>';
-            })
-          }
-        }else{
-          li[i].style.display = 'none'
+      // Destacar trecho que bate (tenta usar regex simples, case-insensitive)
+      let label = p.title;
+      if (query) {
+        try {
+          const re = new RegExp(escapeReg(query), "i");
+          label = label.replace(re, (m) => `<strong>${m}</strong>`);
+        } catch (err) {
+          /* ignore */
         }
       }
+
+      li.innerHTML = `
+        <a href="#" title="${p.title}">
+          ${p.img ? `<img src="${p.img}" alt="${p.title}" width="50px">` : ""}
+          <span class="item-name">${label}</span>
+        </a>
+      `;
+
+      // Ao clicar na sugestão, abre o modal do produto correspondente
+      li.querySelector("a").addEventListener("click", (e) => {
+        e.preventDefault();
+        // clique no botão que abre o modal dentro do card
+        const abrirBtn = p.el.querySelector(".abrir-modal");
+        if (abrirBtn) abrirBtn.click();
+        clearSuggestions();
+        input.blur();
+      });
+
+      suggestionsEl.appendChild(li);
+    });
+  }
+
+  // Event handlers
+  input.addEventListener("input", () => {
+    const q = normalize(input.value);
+    if (!q) {
+      clearSuggestions();
+      return;
     }
+    const matches = products.filter((p) => p.norm.indexOf(q) > -1);
+    renderSuggestions(matches, input.value);
+  });
+
+  // Mostrar sugestões ao focar (se já tiver texto)
+  input.addEventListener("focus", () => {
+    const q = normalize(input.value);
+    if (!q) return;
+    const matches = products.filter((p) => p.norm.indexOf(q) > -1);
+    renderSuggestions(matches, input.value);
+  });
+
+  // Fechar sugestões ao clicar fora do .buscar
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".buscar")) clearSuggestions();
+  });
+}
