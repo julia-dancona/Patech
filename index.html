@@ -64,24 +64,97 @@
         <span class="dot" onclick="currentSlide(2)"></span>
     </div>
     
-    <section class="novidades">
+    <div class="tituloNews">
         <h1> Novidades </h1>
-        <div class="itensNovos">
-            <div class="item01">
-                <img src="img/Novidades1.png" class="produtos"> <br> 
-                <figcaption> Gabinete Gamer Pichau Atom, Mini-Tower, Lateral de Vidro, Com 1 Fan, Preto. <br> <p> R$ 139,99 </p> </figcaption>
-            </div>
+    </div>
+    <section class="novidades">
 
-            <div class="item01">
-                 <img src="img/Novidades2.png" class="produtos"> 
-                <br><figcaption> Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol, Preto, ZNO-RUST100-BL01 <br> <p> R$ 149,99 </p>  </figcaption>
+        <div class="modais"> <!-- Novidade 1 -->
+            <div class="itensNovos">
+                    <button class="abrir-modal">
+                        <img src="img/Novidades1.png" class="card-produto" id="bordas"> 
+                        <figcaption class="legenda-card"> Gabinete Gamer<p>R$ 139,99 </p></figcaption>
+                    </button>
+                <div id="produto45" class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/Novidades1.png" class="produto-img" id="bordas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="produto-nome"> Gabinete Gamer </h1>
+                                <figcaption class="legenda-conteudo"> Gabinete Gamer Pichau Atom, Mini-Tower, Lateral de Vidro, Com 1 Fan, Preto.</figcaption>
+                                <p class="preco-antes"> <del> R$ 250,99 </del> </p>
+                                <p class="produto-preco"> R$ 139,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="adicionarAoCarrinho('produto45')" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="item01">
-                <img src="img/Novidades3.png" class="produtos"> <br>
-                <figcaption> Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte, Preto <br> <p>R$ 216,75</p> </figcaption>
+        <div class="modais"> <!-- Novidade 2 -->
+            <div class="itensNovos">
+                    <button class="abrir-modal">
+                        <img src="img/Novidades2.png" class="card-produto"  id="bordas"> 
+                        <figcaption class="legenda-card"> Suporte Articulado <p> R$ 149,99 </p></figcaption>
+                    </button>
+                <div id="produto46" class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/Novidades2.png" class="produto-img" id="bordas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="produto-nome"> Suporte Articulado </h1>
+                                <figcaption class="legenda-conteudo"> Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol, Preto, ZNO-RUST100-BL01 </figcaption>
+                                <p class="preco-antes"> <del> R$ 250,99 </del> </p>
+                                <p class="produto-preco"> R$ 149,99 </p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="adicionarAoCarrinho('produto46')" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> 
+        </div>
+
+        <div class="modais"> <!-- Novidade 3 -->
+            <div class="itensNovos">
+                    <button class="abrir-modal">
+                        <img src="img/Novidades3.png" class="card-produto"  id="bordas"> 
+                        <figcaption class="legenda-card"> Microfone Gamer <p> R$ 216,75 </p></figcaption>
+                    </button>
+                <div id="produto47" class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/Novidades3.png" class="produto-img" id="bordas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="produto-nome"> Microfone Gamer </h1>
+                                <figcaption class="legenda-conteudo"> Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte, Preto </figcaption>
+                                <p class="preco-antes"> <del> R$ 310,99 </del> </p>
+                                <p class="produto-preco"> R$ 216,75 </p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="adicionarAoCarrinho('produto47')" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
     </section>
 
     <section class="Amarelo">
@@ -1172,7 +1245,7 @@
                 </div>
             </div>
             
-            <div class="modais" data-category="redes"> <!-- Produto 40 -->
+            <div class="modais" data-category="acessorios"> <!-- Produto 40 -->
                 <button class="abrir-modal">
                     <img src="img/peca38.png" class="card-produto">
                     <figcaption class="legenda-card">Case Notebook 14 Polegadas<p>R$ 46,66</p></figcaption>
@@ -1302,7 +1375,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -1335,9 +1407,9 @@
                 <div class="tituloA">
                     <h1> Ajuda </h1>
                     <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> </a>  <p> Fale conosco </p>
-                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.0">  <p> Termos de uso </p>  </a>  
-                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.w50j8ib6fwmx"> <p> Termos de aceite </p> </a>   
-                    <a href="https://docs.google.com/document/d/18rTox0LHfUA-imoJsFoHJbXr3AYM9WkTjAcXv0uHSYs/edit?tab=t.o8zvehntguuq"> <p> Termos de privacidade </p> </a>  
+                    <a href="img/TERMOS/TERMOS-USO.pdf">  <p> Termos de uso </p>  </a>  
+                    <a href="img/TERMOS/TERMOS-ACEITE.pdf"> <p> Termos de aceite </p> </a>   
+                    <a href="img/TERMOS/TERMOS-PRIVACIDADE.pdf"> <p> Termos de privacidade </p> </a>  
                 </div>
             </div>
 
