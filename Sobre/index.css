@@ -48,45 +48,28 @@ h1{
   margin-right: 250px;
   display: flex;
   justify-content: space-around;
-  width: 25%;
-  padding-left: 2%;
-  gap: 5%;
+  width: 5%;
   color: white;
 }
 
 .navbar {
   background-color: #0050a3;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .Logo {
   height: 75px;
   padding-left: 2%;
-  margin: 5px;
+  margin: 6px;
 }
 
 .logoNav{
   margin-left: 2%;
-}
-
-#usr {
-  background: url("img/iconePesquisa.png") no-repeat left / 1.8em;
-  padding-left: 35px;
-  border-radius: 8px;
-  height: 25px;
-  width: 250px;
-  background-color: whitesmoke;
-  border: none;
-}
-
-.Pesquise{
-  margin-left: 25%;
-
-}
-
-input::placeholder {
-  color: #0050a3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .icones{

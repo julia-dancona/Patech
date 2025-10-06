@@ -1,10 +1,6 @@
 // -------------------------
 // NAVEGAÇÃO / MODAIS / CATEGORIAS (mantive sua lógica)
 // -------------------------
-function irCadastro() {
-  window.location.href = "../Cadastro-Login";
-}
-
 function irCadastro() { // abre a tela de cadastro
   window.location.href = "../Cadastro-Login/index.html"
 }
@@ -345,13 +341,8 @@ document.addEventListener('DOMContentLoaded', () => {
             dashboardButton.onclick = function() {
                 window.location.href = "../Usuario/usuario.html"; 
             };
-            
-            // 2. Opcional: Altera a imagem ou texto do botão para indicar o perfil
-            // Se o seu botão é um ícone de perfil, não precisa mudar a imagem.
-            
-        } else {
-            // Se o token NÃO existe (NÃO LOGADO)
-            
+   
+        } else {            
             // 1. Altera o destino para a página de Login/Cadastro
             dashboardButton.onclick = function() {
                 window.location.href = "../Cadastro-Login/index.html";
