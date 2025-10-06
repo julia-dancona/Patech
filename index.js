@@ -5,8 +5,8 @@ function irCadastro() {
   window.location.href = "../Cadastro-Login";
 }
 
-function irCarrinho() {
-  document.getElementById("modalCarrinho1").style.display = "block";
+function irCadastro() { // abre a tela de cadastro
+  window.location.href = "../Cadastro-Login/index.html"
 }
 function fecharModalCarrinho() {
   document.getElementById("modalCarrinho1").style.display = "none";
@@ -261,3 +261,101 @@ function autoShowSlides() {
   dots[autoSlideIndex-1].className += " active";
   setTimeout(autoShowSlides, 5000); // Muda de imagem a cada 5 segundos
 }
+
+//CARRINHO 
+let carrinho = [];
+
+// Adiciona produto ao carrinho a partir do ID do modal
+function adicionarAoCarrinho(idProduto) {
+  const produto = document.getElementById(idProduto);
+
+  if (!produto) {
+    console.error("Produto não encontrado:", idProduto);
+    return;
+  }
+
+  const nome = produto.querySelector(".produto-nome").textContent.trim();
+  const preco = produto.querySelector(".produto-preco").textContent.trim();
+  const imagem = produto.querySelector(".produto-img").src;
+
+  // Adiciona o item no array do carrinho
+  carrinho.push({ nome, preco, imagem });
+
+  atualizarCarrinho();
+  abrirCarrinho();
+}
+
+// Atualiza o conteúdo do modal do carrinho
+function atualizarCarrinho() {
+  const container = document.getElementById("carrinho-itens");
+  const vazio = document.getElementById("carrinho-vazio");
+
+  container.innerHTML = "";
+
+  if (carrinho.length === 0) {
+    vazio.style.display = "block";
+    return;
+  } else {
+    vazio.style.display = "none";
+  }
+
+  carrinho.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("item-carrinho");
+    div.innerHTML = `
+      <img src="${item.imagem}" alt="${item.nome}" class="carrinho-img">
+      <div class="carrinho-info">
+        <p>${item.nome}</p>
+        <p>${item.preco}</p>
+      </div>
+      <button class="remover-btn" onclick="removerItem(${index})">Remover</button>
+    `;
+    container.appendChild(div);
+  });
+}
+
+// Remove item do carrinho
+function removerItem(index) {
+  carrinho.splice(index, 1);
+  atualizarCarrinho();
+}
+
+// Abre o modal do carrinho
+function abrirCarrinho() {
+  document.getElementById("modalCarrinho1").style.display = "block";
+}
+
+// Fecha o modal do carrinho
+function fecharCarrinho() {
+  document.getElementById("modalCarrinho1").style.display = "none";
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Pega o token de autenticação (se existir)
+    const token = localStorage.getItem('authToken');
+    
+    // Encontra o botão do dashboard/login (você chamou de 'dashboard' no seu usuario.html)
+    const dashboardButton = document.getElementById('dashboard'); 
+    
+    if (dashboardButton) {
+        if (token) {
+            // Se o token existe (USUÁRIO LOGADO)
+            
+            // 1. Altera o destino para a página de usuário
+            dashboardButton.onclick = function() {
+                window.location.href = "../Usuario/usuario.html"; 
+            };
+            
+            // 2. Opcional: Altera a imagem ou texto do botão para indicar o perfil
+            // Se o seu botão é um ícone de perfil, não precisa mudar a imagem.
+            
+        } else {
+            // Se o token NÃO existe (NÃO LOGADO)
+            
+            // 1. Altera o destino para a página de Login/Cadastro
+            dashboardButton.onclick = function() {
+                window.location.href = "../Cadastro-Login/index.html";
+            };
+        }
+    }
+});

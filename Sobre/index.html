@@ -21,17 +21,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
-     <link rel="website icon" type="png" href="img/Logo.png">
 </head>
 <body>
     <div class="navbar">
         <div class="logoNav">
             <a href="../index.html"> <img class="Logo" src="../img/Logo.png" alt="Logo"> </img> <a>
-
-                 <div class="redirecionamento">  
-                    <a href="../index.html"> Início </a>
-                    <a href=""> Promoções </a>
-                </div>
+        </div>
+        
+        <div class="redirecionamento">  
+            <a href="../index.html"> Início </a>
+        <a href=""> Promoções </a>
+        </div>
+        
+        <div class="Pesquise">
+            <input type="text" class='pesquisa' id="usr" placeholder="Pesquise na Patech"></input>
         </div>
 
         <div class="icones">
@@ -40,6 +43,31 @@
             <button onclick="irCadastro()" id="dashboard"></button>
         </div>
     </div>
+
+    <section class="slider">
+        <div class="slider-content">
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+
+            <div class="slide-box primeiro" >
+                <video src="img/Banner-PATECH (pc).mp4" alt="slide1"></video>
+            </div>
+
+            <div class="slide-box" >
+                <video src="img/Banner-PATECH (tablet).mp4" alt="slide2" ></video>
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
 
     <section class="sobre01"  id=sobreNos> <!-- SOBRE A PATECH -->
         <div class="sobre1">
@@ -150,14 +178,15 @@
 
     
     <!-- MODAL DO CARRINHO -->
-    <div id="modalCarrinho" class="modal-carrinho">
-        <div class="modal-conteudo">
-            <span class="fechar" onclick="fecharModalCarrinho()">&times;</span>
-            <h2>Seu carrinho</h2>
-            <p>O carrinho está vazio no momento.</p>
-        </div>
+    <div id="modalCarrinho1" class="modal-carrinho1">
+        <div class="modal-conteudo1">
+            <span class="fechar1" onclick="fecharModalCarrinho()">&times;</span>
+                <h2>Seu carrinho</h2>
+                <div id="carrinho-itens"></div>
+                <p id="carrinho-vazio">O carrinho está vazio no momento.</p>
+            </div>
     </div>
-
+    
     <!-- MODAL DOS FAVORITOS  -->
     <div id="modalFavoritos" class="modal-favoritos">
         <div class="modal-conteudo">

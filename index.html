@@ -26,10 +26,10 @@
 <body>
     <div class="navbar">
         
-        <img class="Logo" src="../img/Logo.png" alt="Logo"></img>   
+        <img class="Logo" src="img/Logo.png" alt="Logo"></img>   
         
         <div class="redirecionamento">  
-        <a href="../Sobre/index.html"> Sobre </a>
+        <a href="Sobre/index.html"> Sobre </a>
         <a href=""> Promoções </a>
         </div>
         
@@ -112,7 +112,7 @@
             <button onclick="filtrarProdutos('acessorios')" id="imagemAcess" class="categorias" data-category="acessorios" alt="acessorios"></button>
         </div>
     </div>
-</section>
+    </section>
 
     <div class="tituloN">
         <h1> Nossos produtos </h1>
@@ -122,22 +122,22 @@
 
             <div class="modais" data-category="hardware"><!--Produto 1-->
                 <button class="abrir-modal">
-                    <img src="img/peca1.png" class="card-produto">
+                    <img src="img/peca1.png" class="card-produto"> 
                     <figcaption class="legenda-card"> Processador Intel Core i3-10100F, 3.6GHz (4.3GHz Max Boost) <p>R$ 629,99</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto1" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca1.png" class="pecas">
+                                <img src="img/peca1.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM"> Processador Intel </h1>
+                                <h1 class="produto-nome"> Processador Intel </h1>
                                 <figcaption class="legenda-conteudo"> Processador Intel Core i3-10100F, 3.6GHz (4.3GHz Max Boost)</figcaption>
                                 <p class="preco-antes"> <del> R$ 987,99 </del> </p>
-                                <p class="precos">R$ 629,99</p>
+                                <p class="produto-preco">R$ 629,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto1')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -152,19 +152,19 @@
                     <img src="img/peca2.png" class="card-produto">
                     <figcaption class="legenda-card"> Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo) <p>R$ 599,00</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto2" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca2.png" class="pecas">
+                                <img src="img/peca2.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM"> Processador Ryzen </h1>
+                                <h1 class="produto-nome"> Processador Ryzen </h1>
                                 <figcaption class="legenda-conteudo"> Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo)</figcaption>
                                 <p class="preco-antes"> <del> R$ 654,99 </del> </p>
-                                <p class="precos">R$ 599,00</p>
+                                <p class="produto-preco">R$ 599,00</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto2')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -179,19 +179,19 @@
                     <img src="img/peca3.png" class="card-produto">
                     <figcaption class="legenda-card">Memória DDR5 Kingston Fury SuperFrame, RGB, 16GB, 5600Mhz<p>R$ 420,90</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div  id="produto3" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca3.png" class="pecas">
+                                <img src="img/peca3.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM"> Memória DDR5 </h1>
+                                <h1 class="produto-nome"> Memória DDR5 </h1>
                                 <figcaption class="legenda-conteudo"> Memória DDR5 Kingston Fury SuperFrame, RGB, 16GB, 5600Mhz</figcaption>
                                 <p class="preco-antes"> <del> R$ 554,99 </del> </p>
-                                <p class="precos">R$ 420,90</p>
+                                <p class="produto-preco">R$ 420,90</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto3')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -207,18 +207,18 @@
                     <figcaption class="legenda-card">Placa Mãe Gigabyte B550M Aorus Elite, DDR4, Socket AMD AM4, M-ATX<p>R$ 849,99</p></figcaption>
                 </button>
                 <div class="modal-Produto">
-                    <div class="modal-conteudo">
+                    <div  id="produto4" class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca4.png" class="pecas">
+                                <img src="img/peca4.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM"> Placa Mãe Gigabyte </h1>
+                                <h1 class="produto-nome"> Placa Mãe Gigabyte </h1>
                                 <figcaption class="legenda-conteudo"> Placa Mãe Gigabyte B550M Aorus Elite, DDR4, Socket AMD AM4, M-ATX </figcaption>
                                 <p class="preco-antes"> <del> R$ 954,99 </del> </p>
-                                <p class="precos">R$ 849,99</p>
+                                <p class="produto-preco">R$ 849,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto4')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -233,19 +233,19 @@
                     <img src="img/peca5.png" class="card-produto">
                     <figcaption class="legenda-card">Placa Mãe ASRock B450M Steel Legend, DDR4, Socket AMD AM4, M-ATX<p>R$ 789,99</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto5" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca5.png" class="pecas">
+                                <img src="img/peca5.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Placa Mãe ASRock</h1>
+                                <h1 class="produto-nome">Placa Mãe ASRock</h1>
                                 <figcaption class="legenda-conteudo">Placa Mãe ASRock B450M Steel Legend, DDR4, Socket AMD AM4, M-ATX</figcaption>
                                 <p class="preco-antes"> <del> R$ 976,99 </del> </p>
-                                <p class="precos">R$ 789,99</p>
+                                <p class="produto-preco">R$ 789,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto5')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -260,19 +260,19 @@
                     <img src="img/peca6.png" class="card-produto">
                     <figcaption class="legenda-card">Memória Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz<p>R$ 629,99</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto6"  class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca6.png" class="pecas">
+                                <img src="img/peca6.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Memória Corsair  </h1>
+                                <h1 class="produto-nome">Memória Corsair  </h1>
                                 <figcaption class="legenda-conteudo">Memória Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz</figcaption>
                                 <p class="preco-antes"> <del> R$ 854,99 </del> </p>
-                                <p class="precos">R$ 629,99</p>
+                                <p class="produto-preco">R$ 629,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto6')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -287,19 +287,19 @@
                     <img src="img/peca7.png" class="card-produto">
                     <figcaption class="legenda-card">Processador AMD Ryzen 5 5600GT, 3.6 GHz, (4.6GHz Max Turbo)<p>R$ 1222,21</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div  id="produto7" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca7.png" class="pecas">
+                                <img src="img/peca7.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Processador AMD Ryzen </h1>
+                                <h1 class="produto-nome">Processador AMD Ryzen </h1>
                                 <figcaption class="legenda-conteudo">Processador AMD Ryzen 5 5600GT, 3.6 GHz, (4.6GHz Max Turbo)</figcaption>
                                 <p class="preco-antes"> <del> R$ 1554,99 </del> </p>
-                                <p class="precos">R$ 1222,21</p>
+                                <p class="produto-preco">R$ 1222,21</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto7')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -314,19 +314,19 @@
                     <img src="img/peca8.png" class="card-produto">
                     <figcaption class="legenda-card">Gabinete Gamer, Mini-Tower, Lateral de Vidro, Com 1 Fan, PG-ATOM-BK<p>R$ 129,99</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div  id="produto8" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca8.png" class="pecas">
+                                <img src="img/peca8.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Gabinete Gamer</h1>
+                                <h1 class="produto-nome">Gabinete Gamer</h1>
                                 <figcaption class="legenda-conteudo">Gabinete Gamer, Mini-Tower, Lateral de Vidro, Com 1 Fan, PG-ATOM-BK</figcaption>
                                 <p class="preco-antes"> <del> R$ 181,99 </del> </p>
-                                <p class="precos">R$ 129,99</p>
+                                <p class="produto-preco">R$ 129,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto8')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -341,19 +341,19 @@
                     <img src="img/peca9.png" class="card-produto">
                     <figcaption class="legenda-card">Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)<p>R$ 538,03</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto9" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca9.png" class="pecas">
+                                <img src="img/peca9.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Processador AMD Ryzen</h1>
+                                <h1 class="produto-nome">Processador AMD Ryzen</h1>
                                 <figcaption class="legenda-conteudo">Processador AMD Ryzen 3 3200G, 3.6GHz (4GHz Max Turbo)</figcaption>
                                 <p class="preco-antes"> <del> R$ 750,99 </del> </p>
-                                <p class="precos">R$ 538,03</p>
+                                <p class="produto-preco">R$ 538,03</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto9')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -368,19 +368,19 @@
                     <img src="img/peca10.png" class="card-produto">
                     <figcaption class="legenda-card"> Memória Kingston, 16GB (1x16GB), DDR4, 3200MHz, C22, KVR32N22S8-16 <p>R$ 289,99</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto10" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca10.png" class="pecas">
+                                <img src="img/peca10.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Memória Kingston</h1>
+                                <h1 class="produto-nome">Memória Kingston</h1>
                                 <figcaption class="legenda-conteudo">Memória Kingston, 16GB (1x16GB), DDR4, 3200MHz, C22, KVR32N22S8-16</figcaption>
                                 <p class="preco-antes"> <del> R$ 342,99 </del> </p>
-                                <p class="precos">R$ 289,99</p>
+                                <p class="produto-preco">R$ 289,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto10')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -395,19 +395,19 @@
                     <img src="img/peca11.png" class="card-produto">
                     <figcaption class="legenda-card">Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte<p>R$ 333,32</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto11" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca11.png" class="pecas">
+                                <img src="img/peca11.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Microfone Gamer</h1>
+                                <h1 class="produto-nome">Microfone Gamer</h1>
                                 <figcaption class="legenda-conteudo">Microfone Gamer Maono DGM20, RGB, USB, PC, PS4, PS5 e MAC OS, Com Suporte preto</figcaption>
                                 <p class="preco-antes"> <del> R$ 412,99 </del> </p>
-                                <p class="precos">R$ 333,32</p>
+                                <p class="produto-preco">R$ 333,32</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto11')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -422,19 +422,19 @@
                     <img src="img/peca12.png" class="card-produto">
                     <figcaption class="legenda-card">Processador Intel Core I5 13400f, 2.5GHz (4.6GHz Turbo)<p>R$ 929,57</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto12" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca12.png" class="pecas">
+                                <img src="img/peca12.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Processador Intel</h1>
+                                <h1 class="produto-nome">Processador Intel</h1>
                                 <figcaption class="legenda-conteudo">Processador Intel Core I5 13400f, 2.5GHz (4.6GHz Turbo)</figcaption>
                                 <p class="preco-antes"> <del> R$ 1121,99 </del> </p>
-                                <p class="precos">R$ 929,57</p>
+                                <p class="produto-preco">R$ 929,57</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto12')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -449,19 +449,19 @@
                     <img src="img/peca13.png" class="card-produto">
                     <figcaption class="legenda-card">Placa Mãe MSI B860M Gaming Plus WiFi, DDR5, LGA1851, M-ATX<p>R$ 1.803,99</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div  id="produto13" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca13.png" class="pecas">
+                                <img src="img/peca13.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Placa Mãe</h1>
+                                <h1 class="produto-nome">Placa Mãe</h1>
                                 <figcaption class="legenda-conteudo">Placa Mãe MSI B860M Gaming Plus WiFi, DDR5, LGA1851, M-ATX</figcaption>
                                 <p class="preco-antes"> <del> R$ 2.105,99 </del> </p>
-                                <p class="precos">R$ 1.803,99</p>
+                                <p class="produto-preco">R$ 1.803,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto13')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -476,19 +476,19 @@
                     <img src="img/peca14.png" class="card-produto">
                     <figcaption class="legenda-card">Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol<p>R$ 352,64</p></figcaption>
                 </button>
-                <div class="modal-Produto">
+                <div id="produto14" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca14.png" class="pecas">
+                                <img src="img/peca14.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Suporte Articulado</h1>
+                                <h1 class="produto-nome">Suporte Articulado</h1>
                                 <figcaption class="legenda-conteudo">Suporte Articulado Para Monitor Zinnia Rust 100, 17 Pol a 32 Pol </figcaption>
                                 <p class="preco-antes"> <del> R$ 450,99 </del> </p>
-                                <p class="precos">R$ 352,64</p>
+                                <p class="produto-preco">R$ 352,64</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto14')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -503,20 +503,19 @@
                     <img src="img/peca15.png" class="card-produto">
                     <figcaption class="legenda-card">Placa de Vídeo XFX Radeon RX 9060 XT Gaming Edition OC White, 8GB, GDDR6, 128-bit<p>R$ 2.379,99</p></figcaption>
                 </button>
-
-                <div class="modal-Produto">
+                <div id="produto15" class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca15.png" class="pecas">
+                                <img src="img/peca15.png" class="produto-img">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Placa de Vídeo</h1>
+                                <h1 class="produto-nome">Placa de Vídeo</h1>
                                 <figcaption class="legenda-conteudo">Placa de Vídeo XFX Radeon RX 9060 XT Gaming Edition OC White, 8GB, GDDR6, 128-bit</figcaption>
                                 <p class="preco-antes"> <del> R$ 2.745,99 </del> </p>
-                                <p class="precos">R$ 2.379,99</p>
+                                <p class="produto-preco">R$ 2.379,99</p>
                                 <div class="botoesAcaoes2"> 
-                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="adicionarAoCarrinho('produto15')" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
                                 </div>
                             </div>
@@ -531,17 +530,44 @@
                     <img src="img/peca16.png" class="card-produto">
                     <figcaption class="legenda-card">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte<p>R$ 149,90</p></figcaption>
                 </button>
+                <div id="produto16" class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca16.png" class="produto-img">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="produto-nome">Gabinete Gamer</h1>
+                                <figcaption class="legenda-conteudo">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte</figcaption>
+                                <p class="preco-antes"> <del> R$ 246,99 </del> </p>
+                                <p class="produto-preco">R$ 149,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="adicionarAoCarrinho('produto16')" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modais" data-category="perifericos"> <!-- Produto 17 -->
+                <button class="abrir-modal">
+                    <img src="img/peca17.png" class="card-produto">
+                    <figcaption class="legenda-card">Kit Gamer Redragon <p>R$ 329,99</p></figcaption>
+                </button>
                 <div class="modal-Produto">
                     <div class="modal-conteudo">
                         <div class="conteudoJunto">
                             <div class="p1">
-                                <img src="img/peca16.png" class="pecas">
+                                <img src="img/peca17.png" class="pecas">
                             </div>
                             <div class="tituloEpreco">
-                                <h1 class="tituloM">Gabinete Gamer</h1>
-                                <figcaption class="legenda-conteudo">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte</figcaption>
-                                <p class="preco-antes"> <del> R$ 246,99 </del> </p>
-                                <p class="precos">R$ 149,90</p>
+                                <h1 class="tituloM">Kit Gamer Redragon</h1>
+                                <figcaption class="legenda-conteudo">Kit Gamer Redragon Teclado Mecânico Kumara, RGB, Switch Outemu Blue, PT, Branco + Mouse Cobra M711, Chroma, 10000DPI, Branco - S118W</figcaption>
+                                <p class="preco-antes"> <del> R$ 447,05 </del> </p>
+                                <p class="precos">R$ 329,99</p>
                                 <div class="botoesAcaoes2"> 
                                     <button onclick="" class="btnModal"> Comprar agora </button>
                                     <button onclick="" class="btnModal"> Adicionar à lista </button>
@@ -552,6 +578,721 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modais" data-category="perifericos"> <!-- Produto 18 -->
+                <button class="abrir-modal">
+                    <img src="img/peca18.png" class="card-produto">
+                    <figcaption class="legenda-card">Gabinete Gamer Pure Power Aqua, Mid Tower, Vidro Temperado, M-ATX, Sem Fonte<p>R$ 535,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca18.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Kit Gamer Redragon RGB</h1>
+                                <figcaption class="legenda-conteudo">Kit Gamer Redragon RGB, Headset Lamia 2 Surround 7.1 + Teclado Kumara Switch Outemu Blue + Mouse Cobra M711 12400 DPI, Preto - S125</figcaption>
+                                <p class="preco-antes"> <del> R$ 705,87 </del> </p>
+                                <p class="precos">R$ 535,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="modais" data-category="perifericos"> <!-- Produto 19 -->
+                <button class="abrir-modal">
+                    <img src="img/peca19.png" class="card-produto">
+                    <figcaption class="legenda-card">Mouse Gamer Sem Fio Redragon King 4K Pro, Wireless, 26000 DPI, 7 Botões, Preto - M916-PRO-4K<p>R$ 279,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca19.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Mouse Gamer Sem Fio Redragon</h1>
+                                <figcaption class="legenda-conteudo">Mouse Gamer Sem Fio Redragon King 4K Pro, Wireless, 26000 DPI, 7 Botões, Preto - M916-PRO-4K</figcaption>
+                                <p class="preco-antes"> <del> R$ 399,99 </del> </p>
+                                <p class="precos">R$ 279,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            
+            <div class="modais" data-category="perifericos"> <!-- Produto 20 -->
+                <button class="abrir-modal">
+                    <img src="img/peca20.png" class="card-produto">
+                    <figcaption class="legenda-card">Mesa Dobrável de Colo Para Notebook Fortrek Lapdesk, Preta - 84989<p>R$ 142,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca20.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Mesa Dobrável</h1>
+                                <figcaption class="legenda-conteudo">Mesa Dobrável de Colo Para Notebook Fortrek Lapdesk, Preta - 84989</figcaption>
+                                <p class="precos">R$ 142,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 21 -->
+                <button class="abrir-modal">
+                    <img src="img/peca21.png" class="card-produto">
+                    <figcaption class="legenda-card">Notebook Acer Nitro V15<p>R$ 7.019,10</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca21.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Notebook Acer Nitro V15</h1>
+                                <figcaption class="legenda-conteudo">Notebook Acer Nitro V15, Intel Core i9-13900h De 13°G, 16GB, SSD 512GB, RTX4060, Tela 15.6" Full HD, Windows 11 Home - Anv15-52-96aq</figcaption>
+                                <p class="preco-antes"> <del>R$ 8.999,00</del> </p>                               
+                                <p class="precos">R$ 7.019,10</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 22 -->
+                <button class="abrir-modal">
+                    <img src="img/peca22.png" class="card-produto">
+                    <figcaption class="legenda-card">Notebook Dell Inspiron<p>R$ 3.619,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca22.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Notebook Dell Inspiron</h1>
+                                <figcaption class="legenda-conteudo">Notebook Dell Inspiron I15-i1300-m30p 15.6" Full Hd 13ª Gen Intel Core I5 8gb 512gb SSD Win 11 Preto Carbono</figcaption>
+                                <p class="preco-antes"> <del>R$ 3.829,00</del> </p>
+                                <p class="precos">R$ 3.619,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 23 -->
+                <button class="abrir-modal">
+                    <img src="img/peca23.png" class="card-produto">
+                    <figcaption class="legenda-card">Smartphone Samsung A06<p>R$ 599,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca23.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Smartphone Samsung A06</h1>
+                                <figcaption class="legenda-conteudo">Smartphone Samsung A06 4G 128GB 4GB Tela 6.7 Cam 50MP Frontal 8MP Azul Escuro</figcaption>
+                                <p class="precos">R$ 599,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 24 -->
+                <button class="abrir-modal">
+                    <img src="img/peca24.png" class="card-produto">
+                    <figcaption class="legenda-card">iPhone 16 Pro Max Apple <p>R$ 8.990,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca24.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">iPhone 16 Pro Max Apple</h1>
+                                <figcaption class="legenda-conteudo">iPhone 16 Pro Max Apple 256GB, Câmera Tripla de 48MP, Tela 6,9", Titânio Branco</figcaption>
+                                <p class="preco-antes"> <del>R$ 11.776,67</del> </p>
+                                <p class="precos">R$ 8.990,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 25 -->
+                <button class="abrir-modal">
+                    <img src="img/peca25.png" class="card-produto">
+                    <figcaption class="legenda-card">iPad Air Apple 11<p>R$ 5.690,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca25.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">iPad Air Apple 11</h1>
+                                <figcaption class="legenda-conteudo">iPad Air Apple 11" 128 GB, Chip M3, Wi-Fi, Câmera Traseira 12MP, Estelar - MC9Y4BZ/A</figcaption>
+                                <p class="preco-antes"> <del>R$ 7.129,86</del> </p>                               
+                                <p class="precos">R$ 5.690,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 26 -->
+                <button class="abrir-modal">
+                    <img src="img/peca26.png" class="card-produto">
+                    <figcaption class="legenda-card">Kindle 11ª Geração<p>R$ 616,55</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca26.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Kindle 11ª Geração</h1>
+                                <figcaption class="legenda-conteudo">Kindle 11ª Geração Amazon, Com Tela Antirreflexo, Luz Frontal Ajustável e Bateria De Longa Duração, Preta - B0cp31l73x</figcaption>
+                                <p class="precos">R$ 616,55</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 27 -->
+                <button class="abrir-modal">
+                    <img src="img/peca27.png" class="card-produto">
+                    <figcaption class="legenda-card">Notebook ASUS Vivobook 15<p>R$ 2.999,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca27.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Notebook ASUS Vivobook 15</h1>
+                                <figcaption class="legenda-conteudo">Notebook ASUS Vivobook 15 M1502, AMD Ryzen 7 5825U, 16GB RAM, 512 GB SSD, KeepOS, Tela 15.6, FHD, Cool Silver - M1502YA-NJ612</figcaption>
+                                <p class="preco-antes"> <del>R$ 3.887,78</del> </p>
+                                <p class="precos">R$ 2.999,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="eletronicos"> <!-- Produto 28 -->
+                <button class="abrir-modal">
+                    <img src="img/peca28.png" class="card-produto">
+                    <figcaption class="legenda-card">Notebook Acer Aspire 15<p>R$ 2.999,00</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca28.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Notebook Acer Aspire 15</h1>
+                                <figcaption class="legenda-conteudo">Notebook Acer Aspire 15 A15-51M-54E6, i5-13420H 13º Geração, 8GB RAM, 512GB SSD, 15.6" FHD LED, 60Hz, Win11 Home, Cinza Aço - NX.J1QAL.002</figcaption>
+                                <p class="preco-antes"> <del>R$ 3.888,88</del> </p>
+                                <p class="precos">R$ 2.999,00</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 29 -->
+                <button class="abrir-modal">
+                    <img src="img/peca29.png" class="card-produto">
+                    <figcaption class="legenda-card">Adaptador De Usb<p>R$ 29,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca29.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Adaptador De Usb</h1>
+                                <figcaption class="legenda-conteudo">Adaptador De Usb Para Rj 45 Internet</figcaption>
+                                <p class="precos">R$ 29,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 30 -->
+                <button class="abrir-modal">
+                    <img src="img/peca30.png" class="card-produto">
+                    <figcaption class="legenda-card">Repetidor Sinal Wi-fi<p>R$ 66,49</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca30.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Repetidor Sinal Wi-fi</h1>
+                                <figcaption class="legenda-conteudo">Repetidor Sinal Wi-fi Internet Wireless Expansor Amplificador Rede Antena Roteador Homologado Anatel</figcaption>
+                                <p class="precos">R$ 66,49</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 31 -->
+                <button class="abrir-modal">
+                    <img src="img/peca31.png" class="card-produto">
+                    <figcaption class="legenda-card">Roteador Wireless D-Link <p>R$ 171,35</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca31.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Roteador Wireless D-Link DIR-842</h1>
+                                <figcaption class="legenda-conteudo">Roteador Wireless D-Link DIR-842, Ethernet, AC, 1200Mbps, Duas Redes Wi-Fi, 4 Antenas Externas - Tr-069</figcaption>
+                                <p class="preco-antes"> <del>R$ 259,22</del> </p>
+                                <p class="precos">R$ 171,35</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 32 -->
+                <button class="abrir-modal">
+                    <img src="img/peca32.png" class="card-produto">
+                    <figcaption class="legenda-card">Cabo Impact Lan U/utp<p>R$ 18,77</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca32.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Cabo Impact Lan U/utp</h1>
+                                <figcaption class="legenda-conteudo">Cabo Impact Lan U/utp Para Redes Patch Cord Cat.6 4p Azul 2m Intelbras</figcaption>
+                                <p class="precos">R$ 18,77</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 33 -->
+                <button class="abrir-modal">
+                    <img src="img/peca33.png" class="card-produto">
+                    <figcaption class="legenda-card">Cabo De Rede Utp<p>R$ 22,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca33.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Cabo De Rede Utp</h1>
+                                <figcaption class="legenda-conteudo">Cabo De Rede Utp Para Redes E Sistemas De Segurança - Metro</figcaption>
+                                <p class="precos">R$ 22,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 34 -->
+                <button class="abrir-modal">
+                    <img src="img/peca34.png" class="card-produto">
+                    <figcaption class="legenda-card">Kit STARLINK MINI<p>R$ 1.251,58</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca34.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Kit STARLINK MINI</h1>
+                                <figcaption class="legenda-conteudo">Kit STARLINK MINI Internet via satélite, Dual Band 3 x 3 MU-MIMO, WiFi 5, WPA2, Ethernet LAN, Plugue Starlink, Branco - 2535008BR</figcaption>
+                                <p class="precos">R$ 1.251,58</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 35 -->
+                <button class="abrir-modal">
+                    <img src="img/peca35.png" class="card-produto">
+                    <figcaption class="legenda-card">Kit Alicate De Crimpar<p>R$ 45,05</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca35.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Kit Alicate De Crimpar</h1>
+                                <figcaption class="legenda-conteudo">Kit Alicate De Crimpar + 25 Conector Rj45 Cat6 Internet - Hayom</figcaption>
+                                <p class="precos">R$ 45,05</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="redes"> <!-- Produto 36 -->
+                <button class="abrir-modal">
+                    <img src="img/peca36.png" class="card-produto">
+                    <figcaption class="legenda-card">Adaptador Conversor Wi-fi<p>R$ 72,16</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca36.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Adaptador Conversor Wi-fi</h1>
+                                <figcaption class="legenda-conteudo">Adaptador Conversor Wi-fi 1300mbps Dual Band 5ghz / 2.4 Ghz Internet Fibra</figcaption>
+                                <p class="preco-antes"> <del>R$ 88,88</del> </p>
+                                <p class="precos">R$ 72,16</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 37 -->
+                <button class="abrir-modal">
+                    <img src="img/peca37.png" class="card-produto">
+                    <figcaption class="legenda-card">Case Notebook 15 Polegadas<p>R$ 67,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca37.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Capa Case Notebook Com Bolso</h1>
+                                <figcaption class="legenda-conteudo">Capa Case Notebook Com Bolso, Slim, Prática Reforçada, Ziper Duplo, Preto - 15.6 Polegadas</figcaption>
+                                <p class="precos">R$ 67,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 38 -->
+                <button class="abrir-modal">
+                    <img src="img/peca37.png" class="card-produto">
+                    <figcaption class="legenda-card">Case Notebook 14 Polegadas<p>R$ 53,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca37.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Notebook Acer Aspire 15</h1>
+                                <figcaption class="legenda-conteudo">Capa Case Notebook Com Bolso, Slim, Prática Reforçada, Ziper Duplo, Preto - 14 Polegadas</figcaption>
+                                <p class="precos">R$ 53,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 39 -->
+                <button class="abrir-modal">
+                    <img src="img/peca38.png" class="card-produto">
+                    <figcaption class="legenda-card">Case Notebook 15 Polegadas<p>R$ 48,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca38.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Case Notebook 15 Polegadas</h1>
+                                <figcaption class="legenda-conteudo">Case Para Notebook 15,6 C3tech Seattle</figcaption>
+                                <p class="precos">R$ 48,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 40 -->
+                <button class="abrir-modal">
+                    <img src="img/peca38.png" class="card-produto">
+                    <figcaption class="legenda-card">Case Notebook 14 Polegadas<p>R$ 46,66</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca38.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Case Notebook 14 Polegadas</h1>
+                                <figcaption class="legenda-conteudo">Case Para Notebook Reliza Basic 14, Alça Para Transporte</figcaption>
+                                <p class="precos">R$ 46,66</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 41 -->
+                <button class="abrir-modal">
+                    <img src="img/peca41.png" class="card-produto">
+                    <figcaption class="legenda-card">Carregador Para Dell<p>R$ 58,98</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca41.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Carregador Para Dell</h1>
+                                <figcaption class="legenda-conteudo">Carregador Para Dell 19.5v 3.34a 65w Plug 4.5mm X 3.0mm Xps</figcaption>
+                                <p class="precos">R$ 58,98</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 42 -->
+                <button class="abrir-modal">
+                    <img src="img/peca42.png" class="card-produto">
+                    <figcaption class="legenda-card">Tela de Projeção Com Tripé<p>R$ 519,90</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca42.png" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Tela de Projeção Com Tripé</h1>
+                                <figcaption class="legenda-conteudo">Tela de Projeção Com Tripé 180x180cm - Goldentec Acessórios</figcaption>
+                                <p class="precos">R$ 519,90</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 43 -->
+                <button class="abrir-modal">
+                    <img src="img/peca43.webp" class="card-produto">
+                    <figcaption class="legenda-card">Drone E99 Pro Profissional<p>R$ 289,99</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca43.webp" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Drone E99 Pro Profissional</h1>
+                                <figcaption class="legenda-conteudo">Drone E99 Pro Profissional, Com Câmera 4K, Wi-fi + Acessórios, Preto</figcaption>
+                                <p class="preco-antes"> <del>R$ 300,00</del> </p>
+                                <p class="precos">R$ 289,99</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modais" data-category="acessorios"> <!-- Produto 44 -->
+                <button class="abrir-modal">
+                    <img src="img/peca44.webp" class="card-produto">
+                    <figcaption class="legenda-card">Bolsa Mão Kroser Laptop<p>R$ 279,20</p></figcaption>
+                </button>
+                <div class="modal-Produto">
+                    <div class="modal-conteudo">
+                        <div class="conteudoJunto">
+                            <div class="p1">
+                                <img src="img/peca44.webp" class="pecas">
+                            </div>
+                            <div class="tituloEpreco">
+                                <h1 class="tituloM">Bolsa Mão Kroser Laptop</h1>
+                                <figcaption class="legenda-conteudo">Bolsa Mão Kroser Laptop 17.3" Acessórios Viagem Portátil</figcaption>
+                                <p class="precos">R$ 279,20</p>
+                                <div class="botoesAcaoes2"> 
+                                    <button onclick="" class="btnModal"> Comprar agora </button>
+                                    <button onclick="" class="btnModal"> Adicionar à lista </button>
+                                </div>
+                            </div>
+                            <span class="fechar">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
         </div>
     </section>
 
@@ -608,8 +1349,9 @@
         <div class="modal-conteudo1">
             <span class="fechar1" onclick="fecharModalCarrinho()">&times;</span>
                 <h2>Seu carrinho</h2>
-                <p>O carrinho está vazio no momento.</p>
-        </div>
+                <div id="carrinho-itens"></div>
+                <p id="carrinho-vazio">O carrinho está vazio no momento.</p>
+            </div>
     </div>
 
     <!-- MODAL DOS FAVORITOS  -->
