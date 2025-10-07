@@ -121,22 +121,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-#carrinho {
-  border: none;
-  background: url("img/carrinho.png") no-repeat left / 2.5em;
-  height: 85px;
-  width: 85px;
-  cursor: pointer;
-}
-
-#favoritos {
-  border: none;
-  background: url("img/favoritos.png") no-repeat left / 2.5em;
-  height: 85px;
-  width: 85px;
-  cursor: pointer;
-}
-
 /* RODAPÉ */
 .rodapeAzul {
   height: 500px;
@@ -197,54 +181,6 @@ input::placeholder {
   display: block;
 }
 
-/* MODAL DO CARRINHO */
-.modal-carrinho {
-  display: none; /* Escondido por padrão */
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo */
-}
-
-.modal-conteudo {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 30px;
-  border-radius: 10px;
-  width: 40%;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.fechar {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.fechar:hover,
-.fechar:focus {
-  color: black;
-}
-
-/* MODAL DOS FAVORITOS */
-.modal-favoritos {
-  display: none; /* Escondido por padrão */
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo */
-}
 
 /* FOTO DE PERFIL */
 .User {

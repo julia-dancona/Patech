@@ -461,6 +461,9 @@ h1{
 
 .modal-conteudo1 {
   background-color: #fff;
+  overflow-y: auto;
+  max-height: 40vh;
+  position: relative;
   display: block;
   margin: 10% auto;
   padding: 30px;
@@ -785,3 +788,49 @@ img#banner:hover{
   text-align: center;
   color: gray;
 }
+
+/* MODAL FAVORITOS / LISTA */
+.item-lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-imagem {
+  width: 60px;
+  border-radius: 6px;
+}
+
+.item-detalhes h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.item-detalhes p {
+  margin: 0;
+  color: #444;
+  font-weight: 500;
+}
+
+.remover-item {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 54px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.remover-item:hover {
+  background-color: darkred;
+}
+

@@ -350,3 +350,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// MODAL DOS FAVORITOS 
+// Função para abrir o modal
+function abrirModalFavoritos() {
+  document.getElementById("modalFavoritos1").style.display = "block";
+}
+
+// Função para fechar o modal
+function fecharModalFavoritos() {
+  document.getElementById("modalFavoritos1").style.display = "none";
+}
+
+// Adiciona um item visualmente igual ao do carrinho
+function adicionarALista(produtoId) {
+  const produto = document.getElementById(produtoId);
+  const nome = produto.querySelector(".produto-nome").textContent;
+  const preco = produto.querySelector(".produto-preco").textContent;
+  const imagem = produto.querySelector(".produto-img").src;
+
+  const lista = document.getElementById("lista-itens");
+  const vazioMsg = document.getElementById("lista-vazio");
+  vazioMsg.style.display = "none";
+
+  // Cria o container do produto
+  const item = document.createElement("div");
+  item.classList.add("item-lista");
+
+  item.innerHTML = `
+    <div class="item-info">
+      <img src="${imagem}" class="item-imagem">
+      <div class="item-detalhes">
+        <h3>${nome}</h3>
+        <p>${preco}</p>
+      </div>
+    </div>
+    <button class="remover-item" onclick="removerDaLista(this)">Remover</button>
+  `;
+
+  lista.appendChild(item);
+  abrirModalFavoritos();
+}
+
+// Remove item da lista
+function removerDaLista(botao) {
+  const item = botao.parentElement;
+  item.remove();
+
+  const lista = document.getElementById("lista-itens");
+  if (lista.children.length === 0) {
+    document.getElementById("lista-vazio").style.display = "block";
+  }
+}
